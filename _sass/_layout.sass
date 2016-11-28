@@ -1,0 +1,153 @@
+.site-header
+    border-top: 5px solid $azul-2
+    border-bottom: 1px solid $grey-color-light
+    min-height: 56px
+
+    // Positioning context for the mobile navigation icon
+    position: relative
+
+    a
+        color: $azul-2
+
+.site-title
+    float: left
+    padding: 3px 0
+    img
+        width: 50px
+        height: 50px
+
+.site-nav
+    float: right
+    line-height: 56px
+
+    .menu-icon
+        display: none
+
+    .page-link
+        font:
+            family: $title-font-family
+        text-transform: uppercase
+        line-height: $base-line-height
+
+        // Gaps between nav items, but not on the last one
+        &:not(:last-child)
+            margin-right: 20px
+
+    +media-greater($on-laptop)
+        .page-link
+            padding-left: $spacing-unit / 4
+            padding-right: $spacing-unit / 4
+            &:hover, &.selected
+                padding-top: 20px
+                padding-bottom: 20px
+                background-color: $grey-color-light
+
+    +media-query($on-palm)
+        position: absolute
+        top: 0
+        right: $spacing-unit / 4
+        text-align: right
+
+        .menu-icon
+            display: block
+            float: right
+            width: 40px
+            height: 40px
+            line-height: 0
+            padding: 10px
+            text-align: center
+
+            > svg
+                width: 30px
+                height: 30px
+                color: inherit
+
+                path
+                    fill: currentcolor
+
+        .trigger
+            clear: both
+            display: none
+
+        &:hover
+            background-color: $background-color
+            border-radius: 5px
+            .trigger
+                display: block
+                padding-bottom: 5px
+
+        .page-link
+            display: block
+            padding: 5px 10px
+
+            &:not(:last-child)
+                margin-right: 0
+
+            margin-left: 20px
+
+.site-footer
+    font-size: $small-font-size
+    background-color: $grey-color-dark
+    color: $grey-color
+    padding: $spacing-unit 0
+
+.footer-heading
+    font-size: 20px
+    margin-bottom: $spacing-unit / 2
+
+.page-content
+    padding: $spacing-unit 0
+
+.post-meta
+    font-size: $small-font-size
+    color: $grey-color
+
+.post-header
+    margin-bottom: $spacing-unit
+
+.post-title
+    font:
+        family: $title-font-family
+        size: 42px
+    letter-spacing: -1px
+    line-height: 1
+
+    +media-query($on-laptop)
+        font-size: 36px
+
+.post-content
+    margin-bottom: $spacing-unit
+
+    >
+        h1, h2, h3, h4, h5, h6, p, ul, blockquote, .inner
+            @extend .wrapper
+
+    .inner, .pull
+        @extend %vertical-rhythm
+
+    h2
+        font-size: 32px
+
+        +media-query($on-laptop)
+            font-size: 28px
+
+    h3
+        font-size: 26px
+
+        +media-query($on-laptop)
+            font-size: 22px
+
+    h4
+        font-size: 20px
+
+        +media-query($on-laptop)
+            font-size: 18px
+
+.section-hero
+    padding: $spacing-unit
+    min-height: 70vmin
+    background:
+        image: url('/img/terminais-hidraulicos-50-progressivo.jpg')
+        position: center top
+        repeat: no-repeat
+        size: cover

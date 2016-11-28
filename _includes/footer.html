@@ -1,0 +1,49 @@
+<footer class="site-footer">
+  
+  <div class="wrapper" data-grid="row nowrap justify spacing">
+    <p data-cell="shrink"><img src="{{ site.baseurl }}/img/fornecedores/tubodin.png" alt="tubodin"></p>
+    <p data-cell="shrink"><img src="{{ site.baseurl }}/img/fornecedores/lubefer.png" alt="lubefer"></p>
+    <p data-cell="shrink"><img src="{{ site.baseurl }}/img/fornecedores/balflex.png" alt="balflex"></p>
+    <p data-cell="shrink"><img src="{{ site.baseurl }}/img/fornecedores/lucheti.png" alt="lucheti"></p>
+    <p data-cell="shrink"><img src="{{ site.baseurl }}/img/fornecedores/tramontina.png" alt="tramontina"></p>
+  </div>
+
+  <div class="wrapper large">
+
+    <div data-grid="spacing">
+      <div data-cell="1of2">
+        <h2 class="footer-heading">{{ site.title }}</h2>
+        <ul class="seamless">
+          <li>{{ site.data.contato.endereco }}</li>
+          <li>
+            {% for tel in site.data.contato.telefones %}
+              {% if tel.number %}<a href="tel:{{ tel.number }}">{% endif %}
+                <span data-block="inline">{{ tel.label }}</span>
+              {% if tel.number %}</a>{% endif %}
+              {% if forloop.last == false %} / {% endif %}
+            {% endfor %}
+          </li>
+          <li><a href="mailto:{{ site.data.contato.email }}">{{ site.data.contato.email }}</a></li>
+        </ul>
+      </div>
+      <div data-cell="1of2" data-grid="spacing">
+        <div data-cell="3of4">
+          <p>{{ site.description }}</p>
+        </div>
+        <div data-cell="1of4" data-grid="column justify">
+          <ul class="seamless">
+            <li><a href="{{ site.baseurl }}/">Início</a></li>
+            {% for my_page in site.pages %}
+              {% if my_page.menu-title %}
+                <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu-title }}</a></li>
+              {% endif %}
+            {% endfor %}
+            <li><a href="#orcamento" class="page-link">Orçamento</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

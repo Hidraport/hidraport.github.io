@@ -1,0 +1,78 @@
+
+%form-basis
+	padding: .5em
+	font-size: $base-font-size
+	border: 1px solid $grey-color
+	background-color: #fff
+	transition: .3s ease-in-out
+	outline: none
+	&:focus
+		border-color: $brand-color
+
+fieldset
+	-webkit-margin-start: 0
+	-webkit-margin-end: 0
+	-webkit-padding-before: 0
+	-webkit-padding-start: 0
+	-webkit-padding-end: 0
+	-webkit-padding-after: 0
+	padding: 0 0 $spacing-unit
+	border: none
+
+label
+	display: inline-block
+	width: 10em
+	font-size: .75em
+	text-transform: uppercase
+	line-height: 1
+
+input
+	&[type='text'], 
+	&[type='password'], 
+	&[type='search'], 
+	&[type='tel'], 
+	&[type='url'], 
+	&[type='email'], 
+	&[type='datetime'], 
+	&[type='date'], 
+	&[type='time'], 
+	&[type='month'], 
+	&[type='week'], 
+	&[type='datetime-local'], 
+	&[type='number'], 
+	&[type='range']
+		@extend %form-basis
+		width: 100%
+
+textarea
+	@extend %form-basis
+	font-family: $base-font-family
+	width: 100%
+
+::-webkit-input-placeholder
+	color: $brand-color
+\:-moz-placeholder
+	color: $brand-color
+::-moz-placeholder
+	color: $brand-color
+\:-ms-input-placeholder
+	color: $brand-color
+\:focus::-webkit-input-placeholder
+	-webkit-transition: text-indent 0.5s 0.5s ease
+	transition: text-indent 0.5s 0.5s ease
+	text-indent: -100%
+	opacity: 1
+
+.honeypot
+	display: none
+
+button
+	@extend %form-basis
+	text-transform: uppercase
+	background-color: $brand-color
+	border-color: $brand-color
+	color: $azul-2
+	line-height: $base-line-height
+	&:hover, &:focus
+		box-shadow: 0 0 0 1px $background-color, 0 0 0 2px $brand-color
+

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<section class="section-hero" data-grid="center">
+  <div class="wrapper large" data-grid="center">
+    <div data-cell="1of2">
+      <img src="{{ site.baseurl }}/img/Hidra-Port-logo.png" alt="Logo Hidra-Port">
+    </div>
+    <div data-cell="1of2">
+      {% for page in site.pages %}
+        {% if page.permalink == "/empresa/" %}
+          <h1>{{ page.title }}</h1>
+          <p>{{ page.excerpt }}</p>
+          <p><a href="{{ site.baseurl }}{{ page.url }}" data-btn>Saiba mais...</a> <a href="/produtos/" data-btn="azul">Explore os produtos</a></p>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="page-content section">
+
+  <div class="wrapper">
+
+    <h2>Posts</h2>
+    
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    
+          <h3>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h3>
+        </li>
+      {% endfor %}
+    </ul>
+    
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+  </div>
+
+</section>
