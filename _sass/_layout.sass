@@ -26,12 +26,12 @@
     .page-link
         font:
             family: $title-font-family
+            size: 17px
         text-transform: uppercase
         line-height: $base-line-height
+        letter-spacing: 1px
 
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child)
-            margin-right: 20px
+        margin-left: 20px
 
     +media-greater($on-laptop)
         .page-link
@@ -145,7 +145,7 @@
             font-size: 18px
 
 .section-hero
-    padding: $spacing-unit
+    padding: $spacing-unit 0
     min-height: 70vmin
     background:
         image: url('/img/terminais-hidraulicos-50-progressivo.jpg')
