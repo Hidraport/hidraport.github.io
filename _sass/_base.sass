@@ -56,7 +56,7 @@ li
 h1, h2, h3, h4, h5, h6
     font:
         family: $title-font-family
-        weight: $base-font-weight
+        weight: 200
     line-height: 1
     letter-spacing: .03em
 
@@ -112,7 +112,8 @@ pre
     &.large
         max-width: $large-content-width
 
-    @extend %clearfix
+    &:not([data-grid])
+        @extend %clearfix
 
     +media-query($on-laptop)
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}))

@@ -1,5 +1,5 @@
 .site-header
-    border-top: 5px solid $azul-2
+    border-top: 5px solid $brand-color-dark
     border-bottom: 1px solid $grey-color-light
     min-height: 56px
 
@@ -7,7 +7,7 @@
     position: relative
 
     a
-        color: $azul-2
+        color: $brand-color-dark
 
 .site-title
     float: left
@@ -19,24 +19,25 @@
 .site-nav
     float: right
     line-height: 56px
+    overflow: hidden
 
     .menu-icon
         display: none
 
     .page-link
+        padding-left: $spacing-unit / 4
+        padding-right: $spacing-unit / 4
         font:
             family: $title-font-family
+            weight: 400
             size: 17px
         text-transform: uppercase
         line-height: $base-line-height
         letter-spacing: 1px
 
-        margin-left: 20px
-
     +media-greater($on-laptop)
+
         .page-link
-            padding-left: $spacing-unit / 4
-            padding-right: $spacing-unit / 4
             &:hover, &.selected
                 text-decoration: none
                 padding-top: 20px
@@ -52,8 +53,8 @@
         .menu-icon
             display: block
             float: right
-            width: 40px
-            height: 40px
+            width: 60px
+            height: 50px
             line-height: 0
             padding: 10px
             text-align: center
@@ -73,18 +74,29 @@
         &:hover
             background-color: $background-color
             border-radius: 5px
+            box-shadow: -25px 5px 20px -30px $grey-color
             .trigger
                 display: block
                 padding-bottom: 5px
 
         .page-link
             display: block
-            padding: 5px 10px
+            padding: $spacing-unit / 4 $spacing-unit
+            animation: come-in 1.5s ease-in-out forwards
+            &:hover, &:focus
+                text-decoration: none
+                background-color: $grey-color-light
+            @for $i from 1 through 9
+                &:nth-of-type(#{$i})
+                    animation-duration: .15s * $i
 
-            &:not(:last-child)
-                margin-right: 0
-
-            margin-left: 20px
+@keyframes come-in
+    0%
+        opacity: 0
+        transform: translate(100%)
+    100%
+        opacity: 1
+        transform: translate(0)
 
 .site-footer
     font-size: $small-font-size
@@ -109,6 +121,7 @@
 .post-title
     font:
         family: $title-font-family
+        weight: 400
         size: 42px
     letter-spacing: -1px
     line-height: 1
@@ -120,8 +133,15 @@
     margin-bottom: $spacing-unit
 
     >
-        h1, h2, h3, h4, h5, h6, p, ul, blockquote, .inner
+        h1, h2, h3, h4, h5, h6, p, blockquote, .inner
             @extend .wrapper
+            +media-query($on-laptop)
+                padding-left: 0
+                padding-right: 0
+        ul
+            @extend .wrapper
+            +media-greater($on-laptop)
+                padding-left: $spacing-unit * 1.5
 
     .inner, .pull
         @extend %vertical-rhythm
