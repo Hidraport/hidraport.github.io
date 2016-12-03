@@ -20,11 +20,19 @@ gems:
 collections:
   categorias:
     output: true
+  produtos:
+    output: true
 
 defaults:
   - scope:
       path: ""
       type: categorias
+    values:
+      layout: produto
+      permalink: produtos/:path/
+  - scope:
+      path: ""
+      type: produtos
     values:
       layout: produto
       permalink: produtos/:path/

@@ -28,22 +28,25 @@
         padding-left: $spacing-unit / 4
         padding-right: $spacing-unit / 4
         font:
-            family: $title-font-family
             weight: 400
-            size: 17px
+            size: 12px
         text-transform: uppercase
         line-height: $base-line-height
         letter-spacing: 1px
 
-    +media-greater($on-laptop)
+    +media-greater($on-palm)
 
         .page-link
             &:hover, &.selected
                 text-decoration: none
-                padding-top: 20px
+                padding-top: 22px
                 padding-bottom: 20px
                 background-color: $grey-color-light
 
+    +media-query($on-laptop)
+        .page-link
+            padding-left: 8px
+            padding-right: 8px
     +media-query($on-palm)
         position: absolute
         top: 0
@@ -119,10 +122,6 @@
     margin-bottom: $spacing-unit
 
 .post-title
-    font:
-        family: $title-font-family
-        weight: 400
-        size: 42px
     letter-spacing: -1px
     line-height: 1
 
@@ -142,24 +141,6 @@
 
     .inner, .pull
         @extend %vertical-rhythm
-
-    h2
-        font-size: 32px
-
-        +media-query($on-laptop)
-            font-size: 28px
-
-    h3
-        font-size: 26px
-
-        +media-query($on-laptop)
-            font-size: 22px
-
-    h4
-        font-size: 20px
-
-        +media-query($on-laptop)
-            font-size: 18px
 
 .section-hero
     padding: $spacing-unit 0
