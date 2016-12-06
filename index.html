@@ -11,7 +11,7 @@ layout: default
       {% for page in site.pages %}
         {% if page.permalink == "/empresa/" %}
           <h1>{{ page.title }}</h1>
-          <p>{{ page.excerpt }}</p>
+          <p class="page-excerpt">{{ page.excerpt }}</p>
           <p><a href="{{ site.baseurl }}{{ page.url }}" data-btn>Saiba mais...</a> <a href="/produtos/" data-btn="azul">Explore os produtos</a></p>
         {% endif %}
       {% endfor %}
