@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
+
 {% assign page_crumbs = page.url | split: '/' %}
+
 <section class="page-content post">
 
   {% capture page_img %}{{ site.baseurl }}/img{{ page.url | append: '@§' | remove: '/@§' }}.jpg{% endcapture %}
