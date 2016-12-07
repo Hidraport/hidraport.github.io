@@ -1,5 +1,5 @@
 ---
-layout: produto
+layout: categoria
 title: Produtos Hidra-Port
 menu-title: Produtos
 permalink: /produtos/
