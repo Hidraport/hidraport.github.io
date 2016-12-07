@@ -142,6 +142,34 @@
     .inner, .pull
         @extend %vertical-rhythm
 
+.card
+    padding: $spacing-unit / 4
+    margin: 0 $spacing-unit / 4 $spacing-unit / 4 0
+    background-color: #fff
+    border-radius: 4px
+    box-shadow: 0 2px 6px 0 $grey-color-light
+    .card-pic
+        width: 100%
+        margin-bottom: $spacing-unit / 4
+        background-color: #fff
+        img
+            display: block
+            margin: auto
+
+.lista-categorias
+    .lista-categorias-item
+        a
+            display: block
+            padding: $spacing-unit / 4
+            border-top: 1px solid $grey-color-light
+            color: $azul-2
+            &:hover, &:focus, &.selected
+                background-color: $grey-color-light
+                text-decoration: none
+            &.selected
+                background-color: $azul-1
+                color: #fff
+
 .section-hero
     padding: $spacing-unit 0
     min-height: 70vmin

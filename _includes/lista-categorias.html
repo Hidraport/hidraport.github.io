@@ -1,0 +1,8 @@
+<nav class="lista-categorias" data-cell="1of4">
+	<header><h4>Categorias</h4></header>
+  {% for categoria in site.categorias %}
+    <article class="lista-categorias-item">
+      <a href="{{ site.baseurl }}{{ categoria.url }}"{% if page.url contains categoria.url %} class="selected"{% endif %}>{{ categoria.title }}</a>
+    </article>
+  {% endfor %}
+</nav>

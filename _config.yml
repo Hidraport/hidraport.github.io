@@ -28,7 +28,7 @@ defaults:
       path: ""
       type: categorias
     values:
-      layout: produto
+      layout: categoria
       permalink: produtos/:path/
   - scope:
       path: ""
