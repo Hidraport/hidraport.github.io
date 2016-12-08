@@ -96,6 +96,16 @@
             +variant(fill)
                 width: 100%
 
+        +media-greater($on-palm)
+            +variant(order-1)
+                order: 1
+                [data-grid~="spacing"] &
+                    margin-right: 0
+                    margin-left: $spacing-unit
+                [data-grid~="small-spacing"] &
+                    margin-right: 0
+                    margin-left: $spacing-unit / 4
+
     +variant(cols-2)
         flex-wrap: wrap
 

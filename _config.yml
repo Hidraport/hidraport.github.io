@@ -18,12 +18,20 @@ gems:
   - jekyll-coffeescript
 
 collections:
+  aplicacoes:
+    output: true
   categorias:
     output: true
   produtos:
     output: true
 
 defaults:
+  - scope:
+      path: ""
+      type: aplicacoes
+    values:
+      layout: page
+      permalink: aplicacoes/:path/
   - scope:
       path: ""
       type: categorias
