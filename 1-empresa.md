@@ -17,7 +17,7 @@ excerpt: >
 </div>
 
 <div class="inner">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1823.2423594013894!2d-46.327122!3d-23.943293999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce0379bb0d9181%3A0xb2f42dd8778d587d!2sAv.+Rangel+Pestana%2C+54+-+Vila+Matias%2C+Santos+-+SP%2C+11013-552%2C+Rep%C3%BAblica+Federativa+do+Brasil!5e0!3m2!1spt-BR!2s!4v1405958480861" width="100%" height="300" frameborder="0" style="border:0;" class="esquerda metade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.4864176842884!2d-46.329261685014956!3d-23.943233884494607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce0378fbbc261b%3A0x97a5cee5615eb44!2sHidra-Port!5e0!3m2!1spt-BR!2sbr!4v1481241777021" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
 Somos uma empresa constantemente preocupada com melhorias internas e aperfeiçoamento dos processos de atendimento, entrega e fabricação de nossos produtos, pensando sempre no melhor para nossos clientes. Oferecemos agilidade e pronta entrega, além de uma parceria na manutenção dos nossos clientes.

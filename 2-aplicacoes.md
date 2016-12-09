@@ -9,6 +9,8 @@ excerpt: >
 
 {% for app in site.aplicacoes %}
 
+---
+
 ## {{ app.title }}
 
 <div data-grid="center spacing" class="inner large">
@@ -23,9 +25,5 @@ excerpt: >
         <p>{{ app.content }}</p>
     </div>
 </div>
-
-{% if forloop.last == false %}
-<hr class="inner">
-{% endif %}
 
 {% endfor %}
