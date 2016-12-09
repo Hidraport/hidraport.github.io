@@ -1,3 +1,3 @@
 {% assign img_url = include.src | append: '§' | remove: '/§' | remove: '.html§' | append: '.' | append: include.format %}
 
-<img src="{{ site.baseurl }}/img{{ img_url }}" alt="{{ include.alt }}">
+<img src="{{ site.baseurl }}/img{{ img_url }}" alt="{{ include.alt }}"{% if include.width %} width="{{ include.width }}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %}>

@@ -1,5 +1,11 @@
 ---
 layout: default
+features:
+  /produtos/conexoes/conexoes-para-mangueiras/
+  /produtos/lubrificacao/unidades-de-conservacao/
+  /produtos/mangueiras-hidraulicas/mangueiras-de-super-alta-pressao/
+  /produtos/mangueiras-industriais/flexiveis-metalicos/
+  /produtos/tubos/tubos-de-cobre/
 ---
 
 <section class="section-hero" data-grid="center">
@@ -14,21 +20,42 @@ layout: default
   </div>
 </section>
 
-{% include fornecedores-logos.html %}
-
-<section class="page-content section">
-
-  <div class="wrapper">
-
-    <h3>Para fazer:</h3>
-
-    <ul>
-      <li>Aplicações</li>
-      <li>Produtos</li>
-      <li>Localização</li>
-      <li>Orçamento</li>
-    </ul>
-
+<section class="page-content section-features">
+  <div data-grid data-cell="stretch" class="wrapper large">
+    {% for produto in site.produtos %}
+      {% if page.features contains produto.url %}
+    
+        <div data-grid="column justify" class="card">
+          <div data-cell="shrink">
+            {% include img_from_url.html 
+              src = produto.url
+              alt = produto.title
+              width = 200
+              format = 'jpg'
+            %}
+          </div>
+          <h6 data-cell="shrink" class="features-title"><a href="{{ site.baseurl }}{{ produto.url }}">{{ produto.title }}</a></h6>
+        </div>
+    
+      {% endif %}
+    {% endfor %}
   </div>
-
+  <div data-grid="end" class="wrapper large">
+    <p data-cell="shrink"><a href="/produtos/">Veja a linha completa »</a></p>
+  </div>
 </section>
+
+<section class="page-content section-aplicacoes">
+  <header class="wrapper">
+    <h2>Aplicações</h2>
+  </header>
+</section>
+
+<section class="page-content section-local">
+  <div class="wrapper">
+    <h2>Localização</h2>
+    {% include mapa.html %}
+  </div>
+</section>
+
+<div class="page-content">{% include fornecedores-logos.html %}</div>

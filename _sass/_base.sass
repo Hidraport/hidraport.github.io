@@ -144,12 +144,38 @@ pre
     +variant(100%)
         width: 100%
 
++module(modal)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    background-color: rgba($grey-color-dark, .3)
+    display: none
+    align-items: center
+    align-content: center
+    justify-content: center
+    transition: .5s ease-in-out
+    &:target
+        display: flex
+    > *
+        max-height: 90%
+        overflow: auto
+        background-color: #fff
+
 +module(btn)
     display: inline-block
-    padding: .5em 1em
+    padding: .3em 1.5em
+    margin-top: .1em
+    margin-bottom: .1em
     color: #fff
     text-align: center
     background-color: $grey-color
+    border-radius: 4px
+    +media-query($on-palm)
+        display: block
+        margin-bottom: .5em
     &:hover, &:focus
         text-decoration: none
         box-shadow: 0 3px 5px 0 rgba(#000, .5)

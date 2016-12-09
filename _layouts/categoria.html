@@ -30,7 +30,7 @@ layout: default
             <div data-grid="center spacing">
               {% for static_file in site.static_files %}
                 {% if static_file.path == p_img %}
-                  <div data-cell="1of3"><img src="{{ p_img }}" alt="{{ p.title }}" width="150"></div>
+                  <div data-cell="shrink"><img src="{{ p_img }}" alt="{{ p.title }}" width="150"></div>
                 {% endif %}
               {% endfor %}
               <div data-cell="2of3">

@@ -12,9 +12,6 @@
 .site-title
     float: left
     padding: 3px 0
-    img
-        width: 50px
-        height: 50px
 
 .site-nav
     float: right
@@ -25,8 +22,7 @@
         display: none
 
     .page-link
-        padding-left: $spacing-unit / 4
-        padding-right: $spacing-unit / 4
+        padding: $spacing-unit / 4
         font:
             weight: 400
             size: 12px
@@ -144,10 +140,14 @@
 
 .card
     padding: $spacing-unit / 4
-    margin: 0 $spacing-unit / 4 $spacing-unit / 4 0
+    margin-bottom: $spacing-unit / 4
     background-color: #fff
     border-radius: 4px
     box-shadow: 0 2px 6px 0 $grey-color-light
+    +media-greater($on-palm)
+        margin-right: $spacing-unit / 4
+        &:last-of-type
+            margin-right: 0
     .card-pic
         width: 100%
         margin-bottom: $spacing-unit / 4
@@ -179,6 +179,19 @@
         position: center top
         repeat: no-repeat
         size: cover
+    +media-query($on-palm)
+        text-align: center
     .hero-tagline
         font: 400 #{$base-font-size * 2}/1.2 $title-font-family
         max-width: 10em
+        +media-query($on-palm)
+            text-shadow: 1px 1px 0 #fff
+
+.section-features
+    margin-top: -$spacing-unit * 1.5
+    .features-title
+        font:
+            size: $base-font-size
+            weight: 400
+    .card
+        text-align: center

@@ -2,22 +2,13 @@
 %form-basis
 	padding: .5em
 	font-size: $base-font-size
-	border: 1px solid $grey-color
+	border: 1px solid $grey-color-light
+	border-radius: 4px
 	background-color: #fff
 	transition: .3s ease-in-out
 	outline: none
 	&:focus
 		border-color: $brand-color
-
-fieldset
-	-webkit-margin-start: 0
-	-webkit-margin-end: 0
-	-webkit-padding-before: 0
-	-webkit-padding-start: 0
-	-webkit-padding-end: 0
-	-webkit-padding-after: 0
-	padding: 0 0 $spacing-unit
-	border: none
 
 label
 	display: inline-block
@@ -50,13 +41,13 @@ textarea
 	width: 100%
 
 ::-webkit-input-placeholder
-	color: $brand-color
+	color: $grey-color
 \:-moz-placeholder
-	color: $brand-color
+	color: $grey-color
 ::-moz-placeholder
-	color: $brand-color
+	color: $grey-color
 \:-ms-input-placeholder
-	color: $brand-color
+	color: $grey-color
 \:focus::-webkit-input-placeholder
 	-webkit-transition: text-indent 0.5s 0.5s ease
 	transition: text-indent 0.5s 0.5s ease
@@ -68,11 +59,14 @@ textarea
 
 button
 	@extend %form-basis
+	padding-left: 1.5em
+	padding-right: 1.5em
 	text-transform: uppercase
-	background-color: $brand-color
+	background-color: transparent
 	border-color: $brand-color
-	color: $azul-2
-	line-height: $base-line-height
+	color: $brand-color
+
 	&:hover, &:focus
-		box-shadow: 0 0 0 1px $background-color, 0 0 0 2px $brand-color
+		background-color: $brand-color
+		color: #fff
 
