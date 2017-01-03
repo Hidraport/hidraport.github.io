@@ -6,17 +6,15 @@ layout: default
 
 <section class="page-content post">
 
-  {% capture page_img %}{{ site.baseurl }}/img{{ page.url | append: '@§' | remove: '/@§' }}.jpg{% endcapture %}
-
   <div class="wrapper large" data-grid="spacing">
     <div class="produto" data-cell="3of4">
-      {% for static_file in site.static_files %}
-        {% if static_file.path == page_img %}
-          <div data-cell="1of4">
-            <img src="{{ page_img }}" alt="page.title">
-          </div>
-        {% endif %}
-      {% endfor %}
+      <div data-cell="1of4">
+        {% include img_from_url.html
+          src = page.url
+          alt = page.title
+          format = 'jpg'
+        %}
+      </div>
       <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
         {{ content }}
@@ -24,21 +22,23 @@ layout: default
 
       {% for p in site.produtos %}
         {% assign p_crumbs = p.url | split: '/' %}
-        {% assign p_img = '/img' | prepend: site.baseurl | append: p.url | append: '@§' | remove: '/@§' | append: '.jpg' %}
         {% if page_crumbs[2] == p_crumbs[2] and page.url != p.url %}
           <article class="card">
             <div data-grid="center spacing">
-              {% for static_file in site.static_files %}
-                {% if static_file.path == p_img %}
-                  <div data-cell="shrink"><img src="{{ p_img }}" alt="{{ p.title }}" width="150"></div>
-                {% endif %}
-              {% endfor %}
+              <div data-cell="shrink">
+                {% include img_from_url.html
+                  src = p.url
+                  alt = p.title
+                  format = 'jpg'
+                  width = 150
+                %}
+              </div>
               <div data-cell="2of3">
                 <h4><a href="{{ site.baseurl }}{{ p.url }}" class="post-title">{{ p.title }}</a></h4>
                 <p>{{ p.excerpt | truncatewords: 12 }}</p>
               </div>
             </div>
-            <footer data-grid="end"><a href="" data-cell="shrink" data-btn="laranja">ADICIONAR AO ORÇAMENTO</a></footer>
+            <footer data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja">ADICIONAR AO ORÇAMENTO</a></footer>
           </article>
         {% endif %}
       {% endfor %}

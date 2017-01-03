@@ -10,34 +10,34 @@ layout: default
     <div class="produto" data-cell="3of4">
       <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-        <p data-grid="end"><a href="#" data-cell="shrink" data-btn="laranja">ADICIONAR AO ORÇAMENTO</a></p>
+        <p data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja">ADICIONAR AO ORÇAMENTO</a></p>
       </header>
 
-      {% capture page_img %}{{ site.baseurl }}/img{{ page.url | append: '@§' | remove: '/@§' }}.jpg{% endcapture %}
-
-      {% for static_file in site.static_files %}
-        {% if static_file.path == page_img %}
-            <img src="{{ page_img }}" alt="page.title">
-        {% endif %}
-      {% endfor %}
+      {% include img_from_url.html
+        src = page.url
+        alt = page.title
+        format = 'jpg'
+      %}
 
       {{ content }}
 
-      <p data-grid="end"><a href="#" data-cell="shrink" data-btn="laranja">ADICIONAR AO ORÇAMENTO</a></p>
+      <p data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja">ADICIONAR AO ORÇAMENTO</a></p>
       
       <aside>
         <h3>Produtos relacionados</h3>
         <div data-grid="wrap">
           {% for p in site.produtos %}
             {% assign p_crumbs = p.url | split: '/' %}
-            {% assign p_img = '/img' | prepend: site.baseurl | append: p.url | append: '@§' | remove: '/@§' | append: '.jpg' %}
             {% if page_crumbs[2] == p_crumbs[2] and page.url != p.url %}
               <div data-grid="column center justify" data-cell="1of4" class="card">
-                {% for static_file in site.static_files %}
-                  {% if static_file.path == p_img %}
-                    <span class="card-pic"><img src="{{ p_img }}" alt="{{ p.title }}" width="150"></span>
-                  {% endif %}
-                {% endfor %}
+                <span class="card-pic">
+                  {% include img_from_url.html
+                    src = p.url
+                    alt = p.title
+                    format = 'jpg'
+                    width = 150
+                  %}
+                </span>
                 <a href="{{ site.baseurl }}{{ p.url }}" data-cell="shrink">
                   {{ p.title }}
                 </a>
@@ -46,6 +46,30 @@ layout: default
           {% endfor %}
         </div>
       </aside>
+
+      <div class="page-content form-container">
+        <form action="" method="post">
+          <p>
+            <label for="nome">Seu nome</label>
+            <input name="nome" type="text" required placeholder="Seu nome para contato">
+          </p>
+          <p>
+            <label for="empresa">Empresa</label>
+            <input name="empresa" type="text" required placeholder="Nome da empresa">
+          </p>
+          <p>
+            <label for="tel">Telefone</label>
+            <input name="tel" type="text" required placeholder="(DDD) 0000-0000">
+          </p>
+          <p>
+            <label for="email">E-mail</label>
+            <input name="email" type="email" required placeholder="email@empresa.com">
+          </p>
+          <div class="produtos-container"></div>
+          <p class="honeypot"><label for="honey">Se estiver vendo isto, deixe este campo vazio:</label><input name="honey" type="text"></p>
+          <p><label for="msg">Detalhes</label><textarea name="msg" cols="30" rows="5" placeholder="Informe todos os detalhes pertinentes ao seu pedido."></textarea></p>
+        </form>
+      </div>
 
     </div>
     {% include lista-categorias.html %}

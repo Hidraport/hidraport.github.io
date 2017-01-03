@@ -19,7 +19,7 @@ gems:
 
 collections:
   aplicacoes:
-    output: true
+    output: false
   categorias:
     output: true
   produtos:

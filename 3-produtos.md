@@ -11,6 +11,7 @@ excerpt: >
 
 Hidra-Port novamente trazendo tecnologia no atendimento aos clientes.
 Contamos hoje com uma bancada de teste hidrostático com capacidade de 35.000 PSI.
+
 Testes de capacidade de trabalho ou ruptura são realizados quase que diariamente.
 
 ## Produtos
@@ -21,7 +22,7 @@ Testes de capacidade de trabalho ou ruptura são realizados quase que diariament
             ISO 9001:2008 e CRCC da Petrobrás. 
             Em breve ISO 14000.</p>
     </div>
-    <div data-cell="1of2"><img src="http://hidraport.com.br/img/uploads/logo_tubodin_300px.png" alt="Tubodin Industrial Ltda"></div>
+    <div data-cell="1of2"><img src="{{ site.baseurl }}/img/logo_tubodin_300px.png" alt="Tubodin Industrial Ltda"></div>
 </div>
 
 Oferecemos uma linha diversificada de mangueiras hidráulicas e mangueiras industriais, além de conexões de diversos tipos:
