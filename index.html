@@ -49,6 +49,28 @@ features:
   <header class="wrapper">
     <h2>Aplicações</h2>
   </header>
+  <div class="wrapper slideshow">
+    {% for app in site.aplicacoes %}
+    <div class="wrapper slide{% if forloop.first == 'true' %} current{% endif %}" data-grid="center">
+      <div data-grid="center spacing">
+        <div class="slide-figure" data-cell="1of3">
+          {% include img_from_url.html
+            src = app.url
+            alt = app.title
+            format = "jpg"
+          %}
+        </div>
+        <div data-cell="2of3">
+          <h3 class="slide-title">{{ app.title }}</h3>
+          <p class="slide-excerpt">{{ app.content | strip_html | strip_newlines | truncatewords: 26 }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="wrapper slideshow-footer" data-grid="end">
+    <p data-cell="shrink"><a href="/aplicacoes">Saiba mais sobre as aplicações dos nossos produtos »</a></p>
+  </div>
 </section>
 
 <section class="page-content section-local">

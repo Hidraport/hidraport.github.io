@@ -14,14 +14,14 @@ excerpt: >
 ## {{ app.title }}
 
 <div data-grid="center spacing" class="inner large">
-    <div data-cell="1of2{% cycle '', ' order-1' %}">
+    <div data-cell="1of3{% cycle '', ' order-1' %}">
         {% include img_from_url.html
             src = app.url
             alt = app.title
             format = 'jpg'
         %}
     </div>
-    <div data-cell="1of2">
+    <div data-cell="2of3">
         <p>{{ app.content }}</p>
     </div>
 </div>

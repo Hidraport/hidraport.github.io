@@ -1,4 +1,4 @@
-<div class="page-content section-orcamento" data-modal id="orcamento">
+<div class="section-orcamento" data-modal id="orcamento">
   <div class="wrapper">
     <h2>Orçamento</h2>
     <form action="">
@@ -20,7 +20,8 @@
       </div>
       <div class="form-list"></div>
       <p><label for="msg">Detalhes</label><textarea name="msg" cols="30" rows="6" placeholder="Informe detalhes do orçamento"></textarea></p>
-      <p data-grid="justify"><a href="#X" data-cell="shrink">FECHAR</a><button data-cell="shrink">Enviar</button></p>
+      <p class="honeypot"><label for="honey">Se estiver vendo isto, deixe este campo em branco</label><input type="text" name="honey"></p>
+      <p data-grid="row nowrap spacing justify"><a href="#X" data-cell="shrink">CONTINUAR SELECIONANDO</a><button data-cell="shrink">Enviar</button></p>
     </form>
   </div>
 </div>

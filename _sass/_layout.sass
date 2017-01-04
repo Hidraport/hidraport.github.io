@@ -195,3 +195,57 @@
             weight: 400
     .card
         text-align: center
+
+.section-aplicacoes
+    overflow: hidden
+    background-color: $azul-1
+    color: #fff
+    a
+        color: $azul-2
+
+.slideshow
+    height: 220px
+    position: relative
+    +media-query($on-palm)
+        height: 600px
+        .slide-figure
+            display: flex
+            align-items: flex-end
+            width: 100%
+            img
+                width: 100%
+
+.slideshow-footer
+    position: relative
+
+.slide
+    position: absolute
+    left: 0
+    right: 0
+    opacity: 0
+    height: 100%
+    transition: .2s ease-in-out
+    .slide-figure, .slide-title, .slide-excerpt
+        transition: .5s ease-in-out
+    .slide-figure
+        transition-delay: .3s
+    .slide-title
+        transition-delay: .6s
+    .slide-excerpt
+        transition-delay: .9s
+    &.current
+        z-index: 999
+        opacity: 1
+        transform: translate(0)
+    &.prev, &.next
+        opacity: 0
+        transform: scale(1.5)
+        .slide-figure
+            opacity: 0
+            transform: translate(-50%)
+        .slide-title
+            opacity: 0
+            transform: translate(50%)
+        .slide-excerpt
+            opacity: 0
+            transform: translate(50%)
