@@ -21,7 +21,7 @@
       <div class="form-list"></div>
       <p><label for="msg">Detalhes</label><textarea name="msg" cols="30" rows="6" placeholder="Informe detalhes do orçamento"></textarea></p>
       <p class="honeypot"><label for="honey">Se estiver vendo isto, deixe este campo em branco</label><input type="text" name="honey"></p>
-      <p data-grid="row nowrap spacing justify"><a href="#X" data-cell="shrink">CONTINUAR SELECIONANDO</a><button data-cell="shrink">Enviar</button></p>
+      <p data-grid="row nowrap spacing justify"><a href="#X" data-cell="shrink">CONTINUAR NAVEGANDO</a><button data-cell="shrink">Enviar</button></p>
     </form>
   </div>
 </div>
@@ -43,7 +43,10 @@
               {% if forloop.last == false %} / {% endif %}
             {% endfor %}
           </li>
-          <li><a href="mailto:{{ site.data.contato.email }}">{{ site.data.contato.email }}</a></li>
+          <li data-grid="spacing">
+            <a data-cell="shrink" href="mailto:{{ site.data.contato.email }}">{{ site.data.contato.email }}</a>
+            <a data-cell="shrink" href="#orcamento">Solicite um orçamento</a>
+          </li>
         </ul>
       </div>
       <div data-cell="1of2" data-grid="spacing">
@@ -58,7 +61,6 @@
                 <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu-title }}</a></li>
               {% endif %}
             {% endfor %}
-            <li><a href="#orcamento" class="page-link">Orçamento</a></li>
           </ul>
         </div>
       </div>

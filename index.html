@@ -1,11 +1,14 @@
 ---
 layout: default
 features:
-  /produtos/conexoes/conexoes-para-mangueiras/
-  /produtos/lubrificacao/unidades-de-conservacao/
-  /produtos/mangueiras-hidraulicas/mangueiras-de-super-alta-pressao/
-  /produtos/mangueiras-industriais/flexiveis-metalicos/
-  /produtos/tubos/tubos-de-cobre/
+  - title: Mangueiras Hidráulicas
+    link: /produtos/mangueiras-hidraulicas/
+  - title: EPIs
+    link: /produtos/equipamentos-de-seguranca/
+  - title: Engates para refinaria
+    link: /produtos/engates-rapidos/engates-rapidos-de-alavanca/
+  - title: Óleos
+    link: /produtos/lubrificacao/oleos/
 ---
 
 <section class="section-hero" data-grid="center">
@@ -22,22 +25,19 @@ features:
 
 <section class="page-content section-features">
   <div data-grid data-cell="stretch" class="wrapper large">
-    {% for produto in site.produtos %}
-      {% if page.features contains produto.url %}
-    
-        <div data-grid="column justify" class="card">
+    {% for produto in page.features %}
+      <div data-grid="column justify" class="card">
           <div data-grid="center">
+            {% assign src = produto.link | prepend: "/destaques" %}
             {% include img_from_url.html 
-              src = produto.url
+              src = src
               alt = produto.title
               width = 200
               format = 'jpg'
             %}
           </div>
-          <h6 data-cell="shrink" class="features-title"><a href="{{ site.baseurl }}{{ produto.url }}">{{ produto.title }}</a></h6>
+          <h6 data-cell="shrink" class="features-title"><a href="{{ site.baseurl }}{{ produto.link }}">{{ produto.title }}</a></h6>
         </div>
-    
-      {% endif %}
     {% endfor %}
   </div>
   <div data-grid="end" class="wrapper large">
@@ -52,13 +52,15 @@ features:
   <div class="wrapper slideshow">
     {% for app in site.aplicacoes %}
     <div class="wrapper slide{% if forloop.first == 'true' %} current{% endif %}" data-grid="center">
-      <div data-grid="center spacing">
-        <div class="slide-figure" data-cell="1of3">
-          {% include img_from_url.html
-            src = app.url
-            alt = app.title
-            format = "jpg"
-          %}
+      <div data-grid="spacing">
+        <div class="slide-figure" data-cell="1of3" data-grid="center">
+          <div data-cell="shrink">
+            {% include img_from_url.html
+              src = app.url
+              alt = app.title
+              format = "jpg"
+            %}
+          </div>
         </div>
         <div data-cell="2of3">
           <h3 class="slide-title">{{ app.title }}</h3>

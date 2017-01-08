@@ -10,7 +10,7 @@ excerpt: >
 ## A Loja
 
 <div data-grid="center spacing" class="inner large">
-    <div data-cell="1of2"><img src="{{ site.baseurl }}/img/foto_loja_1.jpg" alt="Loja Hidra-port"></div>
+    <div data-cell="1of2"><img src="{{ site.baseurl }}/img/empresa.jpg" alt="Loja Hidra-port"></div>
     <div data-cell="1of2">
         <p>A HIDRA-PORT Mangueiras e Conexões, LOJA DE FÁBRICA, é especializada no fornecimento de mangueiras e conexões desde 2007, fabricando e distribuindo materiais para manutenção e montagem industrial em toda a região da Baixada Santista. Atendemos empresas dos setores metalúrgico, químico, siderúrgico, de autopeças, plásticos, papeleiros, de navegação, entre outros.</p>
     </div>
@@ -21,6 +21,8 @@ Somos uma empresa constantemente preocupada com melhorias internas e aperfeiçoa
 <div class="inner">
   {% include mapa.html %}
 </div>
+
+---
 
 ## A Fábrica
 
