@@ -145,9 +145,8 @@
     border-radius: 4px
     box-shadow: 0 2px 6px 0 $grey-color-light
     +media-greater($on-palm)
-        margin-right: $spacing-unit / 4
-        &:last-of-type
-            margin-right: 0
+        &:not(:last-of-type)
+            margin-right: $spacing-unit / 4
     .card-pic
         width: 100%
         margin-bottom: $spacing-unit / 4
@@ -195,6 +194,12 @@
             weight: 400
     .card
         text-align: center
+        +media-greater($on-laptop)
+            &:not(:last-of-type)
+                margin-right: $spacing-unit
+        +media-greater($content-width)
+            &:not(:last-of-type)
+                padding: $spacing-unit / 2
 
 .section-aplicacoes
     overflow: hidden
