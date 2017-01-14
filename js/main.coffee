@@ -114,7 +114,7 @@ if formOrcSection
 		tagListContainer = formOrc.querySelector '.orc-produtos-list'
 		tagList = _ tagListContainer.querySelectorAll 'li'
 
-		tagSelectLabel = 'Adicione produtos...'
+		tagSelectLabel = 'Adicionar produtos...'
 		tagSelect = document.createElement('select')
 		tagSelect.addOption = (val) ->
 			newOption = document.createElement('option')
@@ -151,5 +151,7 @@ if formOrcSection
 					addTag input
 				else
 					removeTag input
+					# Firefox scroll hack
+					tagListContainer.scrollLeft = 0
 
 		tagListContainer.prependChild firstTagItem

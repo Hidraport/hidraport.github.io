@@ -1,5 +1,6 @@
-<div class="section-orcamento" data-modal data-grid="center" id="orcamento">
-  <div class="wrapper">
+<div class="section-orcamento" data-modal data-grid="column center" id="orcamento">
+  {% comment %} Alinhado como coluna devido a um bug no IE11 --> {% endcomment %}
+  <div class="wrapper" data-cell="shrink">
     <h2>Orçamento</h2>
     <form action="" class="form-orcamento">
       <div data-grid="spacing">
