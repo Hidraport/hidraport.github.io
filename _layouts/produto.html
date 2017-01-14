@@ -10,7 +10,7 @@ layout: default
     <div class="produto" data-cell="3of4">
       <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-        <p data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja">ADICIONAR AO ORÇAMENTO</a></p>
+        <p data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja" data-orc-value="{{ page.title }}">ADICIONAR AO ORÇAMENTO</a></p>
       </header>
 
       {% include img_from_url.html
@@ -21,7 +21,7 @@ layout: default
 
       {{ content }}
 
-      <p data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja">ADICIONAR AO ORÇAMENTO</a></p>
+      <p data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja" data-orc-value="{{ page.title }}">ADICIONAR AO ORÇAMENTO</a></p>
       
       <aside>
         <h3>Produtos relacionados</h3>

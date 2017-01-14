@@ -84,59 +84,72 @@ if slider.container
 
 
 
-btnContainers = _ $( '.add-button-container' )
-tagsContainer = $( '.tags-container' )[0]
-formOrcamento = $( '.form-orcamento form' )[0]
-if tagsContainer && btnContainers
-	tagsContainerLabel = tagsContainer.querySelector '.tags-container-label'
-	tagInputs = _ tagsContainer.querySelectorAll '.tag input[type="checkbox"]'
-	formTags = if localStorage.getItem('tags') then localStorage.getItem('tags').split '\n' else []
+formOrcSection = $('.section-orcamento')[0]
+tags = if localStorage.tags then JSON.parse localStorage.tags else []
 
-	updateFormTags = () ->
-		tagInputs.forEach (input) ->
-			input.checked = formTags.indexOf(input.value) >= 0
-		if formTags.length
-			tagsContainerLabel.innerHTML = 'Produtos: <a href="#tags">' + formTags.length + ' selecionados</a>'
-		else
-			tagsContainerLabel.innerHTML = 'Produtos: <a href="#tags">nenhum selecionado</a>'
+saveTags = () ->
+	localStorage.tags = JSON.stringify tags
+addTag = (input) ->
+	if tags.indexOf(input.value) == -1
+		tags.push input.value
+		input.check() if input.check
+	saveTags()
+removeTag = (input) ->
+	index = tags.indexOf(input.value)
+	if index > -1
+		tags.splice index, 1
+	input.uncheck() if input.uncheck
+	saveTags()
 
-	saveTags = () ->
-		localStorage.setItem 'tags', formTags.join '\n'
-		updateFormTags()
+if formOrcSection
+	formOrc = formOrcSection.querySelector '.form-orcamento'
+	if formOrc
+		formOrcSection.classList.add 'js'
+		btns = _ $('[data-orc-value]')
+		btns.forEach (btn) ->
+			btn.addEventListener 'click', (e) ->
+				tagSelector = btn.getAttribute 'data-orc-value'
+				addTag formOrc.querySelector 'input[value="' + tagSelector + '"]'
 
-	addTag = (thisTag) ->
-		return if formTags.indexOf(thisTag) >= 0
-		formTags.push thisTag
-		saveTags()
+		tagListContainer = formOrc.querySelector '.orc-produtos-list'
+		tagList = _ tagListContainer.querySelectorAll 'li'
 
-	removeTag = (thisTag) ->
-		index = formTags.indexOf(thisTag)
-		if index >= 0
-			formTags.splice(index, 1)
-			saveTags()
+		tagSelectLabel = 'Adicione produtos...'
+		tagSelect = document.createElement('select')
+		tagSelect.addOption = (val) ->
+			newOption = document.createElement('option')
+			newOption.text = val
+			tagSelect.add newOption
+		tagSelect.addOption tagSelectLabel
+		tagSelect.addEventListener 'change', (e) ->
+			inputSelected = tagListContainer.querySelector 'input[value="' + tagSelect.value + '"]'
+			addTag inputSelected if inputSelected
+			tagSelect.selectedIndex = 0
+		firstTagItem = document.createElement 'li'
+		firstTagItem.className = 'first-tag-item'
+		firstTagItem.prependChild tagSelect
 
-	btnContainers.forEach (item) ->
-		item.classList.add 'visible'
-		btn = item.querySelector('button.adicionar-produto')
-		btn.addEventListener 'click', (e) ->
-			addTag(location.pathname)
-			scrollToTarget '.form-orcamento'
-
-	updateFormTags()
-	tagInputs.forEach (tag) ->
-		tag.addEventListener 'change', (e) ->
-			if tag.checked
-				addTag tag.value
+		tagList.forEach (tag) ->
+			input = tag.querySelector 'input.orc-produtos-checkbox'
+			label = input.value
+			parent = input.parentNode
+			tagSelect.addOption input.value
+			input.check = () ->
+				input.checked = true
+				input.parentNode.classList.remove 'unchecked'
+				input.parentNode.classList.add 'checked'
+			input.uncheck = () ->
+				input.checked = false
+				input.parentNode.classList.add 'unchecked'
+				input.parentNode.classList.remove 'checked'
+			if tags.indexOf(label) > -1
+				input.check()
 			else
-				removeTag tag.value
+				input.uncheck()
+			input.addEventListener 'change', (e) ->
+				if input.checked
+					addTag input
+				else
+					removeTag input
 
-	tagsContainerLabel.classList.add 'select-style'
-	tagsContainer.classList.add 'closed'
-	tagsContainerLabel.addEventListener 'click', () ->
-		if !(tagsContainer.classList.contains 'closed')
-			tagsContainer.classList.add 'closed'
-		else
-			tagsContainer.classList.remove 'closed'
-
-	formOrcamento.addEventListener 'submit', () ->
-		localStorage.clear()
+		tagListContainer.prependChild firstTagItem

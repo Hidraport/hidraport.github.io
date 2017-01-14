@@ -49,6 +49,8 @@ ul, ol
     &.seamless
         list-style: none
         margin-left: 0
+    &.nospace
+        margin: 0
 
 li
     margin-bottom: $spacing-unit / 4
@@ -158,17 +160,21 @@ pre
     margin: auto
     padding: 0
     background-color: rgba($grey-color-dark, .3)
-    display: none
-    align-items: center
-    align-content: center
-    justify-content: center
-    transition: .5s ease-in-out
-    &:target
-        display: flex
+    transition: opacity .3s ease-in-out
+    &:not(:target)
+        left: 200%
+        opacity: 0
     > *
         max-height: 100%
         overflow: auto
-        background-color: #fff
+        background-color: $background-color
+        animation: fade-in .2s .3s forwards
+
+        @keyframes fade-in
+            0%
+                opacity: 0
+            100%
+                opacity: 1
 
 +module(btn)
     display: inline-block

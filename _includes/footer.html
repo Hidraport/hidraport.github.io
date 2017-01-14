@@ -1,7 +1,7 @@
-<div class="section-orcamento" data-modal id="orcamento">
+<div class="section-orcamento" data-modal data-grid="center" id="orcamento">
   <div class="wrapper">
     <h2>Orçamento</h2>
-    <form action="">
+    <form action="" class="form-orcamento">
       <div data-grid="spacing">
         <div data-cell="1of2">
           <label for="nome">Nome</label><input type="text" name="nome" required placeholder="Digite seu nome completo">
@@ -18,8 +18,23 @@
           <label for="tel">Telefone</label><input type="tel" name="tel" required placeholder="(99) 0000-0000">
         </div>
       </div>
-      <div class="form-list"></div>
-      <p><label for="msg">Detalhes</label><textarea name="msg" cols="30" rows="6" placeholder="Informe detalhes do orçamento"></textarea></p>
+      <div data-grid="spacing">
+        <div data-cell="1of2">
+          <label for="produtos">Produtos</label>
+          <ul class="seamless orc-produtos-list">
+            {% for produto in site.produtos %}{% assign pArr = produto.url | split: '/' %}
+              <li>
+                <input class="orc-produtos-checkbox" type="checkbox" id="{{ pArr[3] }}" value="{{ produto.title }}">
+                <label class="orc-produtos-checkbox" for="{{ pArr[3] }}"></label>
+                <small class="orc-produtos-label">{{ produto.title }}</small>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div data-cell="1of2">
+          <label for="msg">Detalhes</label><textarea name="msg" cols="30" rows="6" placeholder="Informe detalhes do orçamento"></textarea>
+        </div>
+      </div>
       <p class="honeypot"><label for="honey">Se estiver vendo isto, deixe este campo em branco</label><input type="text" name="honey"></p>
       <p data-grid="row nowrap spacing justify"><a href="#X" data-cell="shrink">CONTINUAR NAVEGANDO</a><button data-cell="shrink">Enviar</button></p>
     </form>

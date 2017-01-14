@@ -144,9 +144,6 @@
     background-color: #fff
     border-radius: 4px
     box-shadow: 0 2px 6px 0 $grey-color-light
-    +media-greater($on-palm)
-        &:not(:last-of-type)
-            margin-right: $spacing-unit / 4
     .card-pic
         width: 100%
         margin-bottom: $spacing-unit / 4
@@ -207,6 +204,66 @@
     color: #fff
     a
         color: $azul-2
+
+.section-orcamento
+    .orc-produtos-title
+        margin-bottom: 0
+    .orc-produtos-list
+        @extend %form-basis
+        margin-top: 0
+        height: 125px
+        overflow: hidden
+        overflow-y: auto
+        li
+            margin-bottom: 2px
+            padding: 0 5px
+            background-color: $grey-color-light
+            border-radius: 4px
+
+        .first-tag-item
+            padding: 0
+            select
+                border: none
+                border-radius: 4px
+                background-color: $grey-color-dark
+                padding: 4px 2px
+                color: #fff
+
+        .unchecked
+            display: none
+
+        .checked
+            transform: translate(100%)
+            opacity: 0
+            animation: enter-tag .3s .3s ease-in-out forwards
+
+        @keyframes enter-tag
+            0%
+                transform: translate(100%)
+                opacity: 0
+            100%
+                transform: translate(0)
+                opacity: 1
+
+        .orc-categoria-title
+            font-weight: bold
+            background-color: transparent
+    .orc-produtos-checkbox
+        float: right
+    &.js
+        input.orc-produtos-checkbox
+            position: fixed
+            top: 0
+            left: 200%
+            opacity: 0
+        label.orc-produtos-checkbox
+            cursor: pointer
+            &:hover
+                color: $brand-color
+            &:after
+                content: '\2a09'
+                line-height: 2
+                padding: 0 5px
 
 .slideshow
     height: 220px
