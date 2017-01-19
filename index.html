@@ -24,10 +24,10 @@ features:
 </section>
 
 <section class="page-content section-features">
-  <div data-grid data-cell="stretch" class="wrapper large">
+  <div data-grid="justify" data-cell="stretch" class="wrapper large">
     {% for produto in page.features %}
       <div data-grid="column justify" class="card">
-          <div data-grid="center">
+          <div data-grid="center" class="feature-fig">
             {% assign src = produto.link | prepend: "/destaques" %}
             {% include img_from_url.html 
               src = src
@@ -41,7 +41,7 @@ features:
     {% endfor %}
   </div>
   <div data-grid="end" class="wrapper large">
-    <p data-cell="shrink"><a href="/produtos/">Explore a linha completa »</a></p>
+    <p data-cell="shrink"><a href="/produtos/">Conheça todos os produtos »</a></p>
   </div>
 </section>
 

@@ -184,19 +184,20 @@
             text-shadow: 1px 1px 0 #fff
 
 .section-features
-    margin-top: -$spacing-unit * 1.5
+    margin-top: -$spacing-unit * 2
     .features-title
         font:
             size: $base-font-size
             weight: 400
+        margin: 0
     .card
         text-align: center
-        +media-greater($on-laptop)
-            &:not(:last-of-type)
+        &:not(:last-of-type)
+            margin-right: $spacing-unit / 4
+            +media-greater($on-laptop)
                 margin-right: $spacing-unit
         +media-greater($content-width)
-            &:not(:last-of-type)
-                padding: $spacing-unit / 2
+            padding: $spacing-unit / 2
 
 .section-aplicacoes
     overflow: hidden
