@@ -9,21 +9,56 @@ excerpt: >
 
 ## Bancada de teste
 
-Hidra-Port novamente trazendo tecnologia no atendimento aos clientes.
-Contamos hoje com uma bancada de teste hidrostático com capacidade de 35.000 PSI.
+<div data-grid="center spacing">
+  <div data-cell="1of3">
+    <p>Hidra-Port novamente trazendo tecnologia no atendimento aos clientes.</p>
+  </div>
+  <div data-cell="2of3"><img src="{{ site.baseurl }}/img/produtos/mesa-de-teste-aberta-1.jpg" alt="Mesa de testes aberta"></div>
+</div>
 
-Testes de capacidade de trabalho ou ruptura são realizados quase que diariamente.
+<div data-grid="center spacing">
+  <div data-cell="1of3"><img src="{{ site.baseurl }}/img/produtos/mesa-de-teste-painel.jpg" alt="Painel da mesa de testes"></div>
+  <div data-cell="2of3">
+    <p>Contamos hoje com uma bancada de teste hidrostático com capacidade de 35.000 PSI.</p>
+    <p>Testes de capacidade de trabalho ou ruptura são realizados quase diariamente.</p>
+  </div>
+</div>
 
-## Produtos
+
+  ---
+
+
+## Loja de fábrica
 
 <div data-grid="spacing">
-    <div data-cell="1of2">
-        <p>Hidra-Port - Loja de Fábrica da Tubodin. 
-            ISO 9001:2008 e CRCC da Petrobrás. 
-            Em breve ISO 14000.</p>
-    </div>
-    <div data-cell="1of2"><img src="{{ site.baseurl }}/img/logo_tubodin_300px.png" alt="Tubodin Industrial Ltda"></div>
+  <div data-cell="1of2">
+    <p>
+      Hidra-Port - Loja de Fábrica da Tubodin.<br>
+      ISO 9001:2008 e CRCC da Petrobrás.<br>
+      Em breve ISO 14000.
+    </p>
+  </div>
+  <div data-cell="1of2"><img src="{{ site.baseurl }}/img/logo_tubodin_300px.png" alt="Tubodin Industrial Ltda"></div>
 </div>
+
+
+  ---
+
+
+## Parceria Recyclo
+
+<div data-grid="spacing">
+  <div data-cell="1of2"><img src="{{ site.baseurl }}/img/logo-recyclo.png" alt="Recyclo coleta de lixo reciclável e movimentação de resíduos"></div>
+  <div data-cell="1of2">
+    <p>Empresa parceira para a retirada de resíduos. Basta ser cliente da Hidra-port para fazer parte desta parceria. Consulte mais informações no atendimento da nossa loja.</p>
+  </div>
+</div>
+
+
+  ---
+
+
+## Nossos produtos
 
 Oferecemos uma linha diversificada de mangueiras hidráulicas e mangueiras industriais, além de conexões de diversos tipos:
 
