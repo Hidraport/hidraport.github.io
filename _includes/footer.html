@@ -51,7 +51,7 @@
         <h2 class="footer-heading">{{ site.title }}</h2>
         <ul class="seamless">
           <li>{{ site.data.contato.endereco }}</li>
-          <li>
+          <li>Tel.: 
             {% for tel in site.data.contato.telefones %}
               {% if tel.number %}<a href="tel:{{ tel.number }}">{% endif %}
                 <span data-block="inline">{{ tel.label }}</span>
