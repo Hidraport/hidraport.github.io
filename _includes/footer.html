@@ -59,9 +59,10 @@
               {% if forloop.last == false %} / {% endif %}
             {% endfor %}
           </li>
-          <li data-grid="spacing">
+          <li data-grid="wrap spacing">
             <a data-cell="shrink" href="mailto:{{ site.data.contato.email }}">{{ site.data.contato.email }}</a>
             <a data-cell="shrink" href="#orcamento">Solicite um orçamento</a>
+            <a data-cell="shrink" href="{{ site.data.contato.facebook }}" target="_blank" onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Rodapé');">Siga nossa fan page</a>
           </li>
         </ul>
       </div>
