@@ -184,7 +184,7 @@
             text-shadow: 1px 1px 0 #fff
 
 .section-features
-    margin-top: -$spacing-unit * 2
+    margin-top: -$spacing-unit * 1.5
     .card
         padding: 0
         position: relative
@@ -192,11 +192,19 @@
         overflow: hidden
         background-color: #165265
         &:not(:last-of-type)
-            margin-right: $spacing-unit / 4
+            +media-greater($on-palm)
+                margin-right: $spacing-unit / 4
             +media-greater($on-laptop)
                 margin-right: $spacing-unit
     .feature-fig
         opacity: .5
+        +media-query($on-palm)
+            img
+                position: absolute
+                top: 0
+                left: 0
+                min-width: 100%
+                transform: translateY(-50%)
     .feature-title
         position: absolute
         top: 0

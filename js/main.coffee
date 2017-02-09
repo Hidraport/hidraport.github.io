@@ -104,6 +104,8 @@ removeTag = (input) ->
 if formOrcSection
 	formOrc = formOrcSection.querySelector '.form-orcamento'
 	if formOrc
+		formOrc.addEventListener 'submit', (e) ->
+			localStorage.clear()
 		formOrcSection.classList.add 'js'
 		btns = _ $('[data-orc-value]')
 		btns.forEach (btn) ->

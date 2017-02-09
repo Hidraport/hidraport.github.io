@@ -36,7 +36,7 @@ Somos uma empresa constantemente preocupada com melhorias internas e aperfeiçoa
 <div data-grid="center spacing" class="inner large">
   <div data-cell="2of3"><img src="{{ site.baseurl }}/img/expedicao_2.jpg" alt="Tubulação e Expedição"></div>
   <div data-cell="1of3">
-    <p><img src="http://hidraport.com.br/img/uploads/logo_tubodin_300px.png" alt="Tubodin - Fabricantede produtos Hida-port"></p>
+    <p><img src="{{ site.baseurl }}/img/logo_tubodin_300px.png" alt="Tubodin - Fabricantede produtos Hida-port"></p>
     <p>A fabricação dos nossos produtos segue uma melhoria contínua em processos de tecnologia, visando atendimento com qualidade e segurança. Nossa fábrica TUBODIN é certificada ISO9001:2008 e CRCC da Petrobrás.</p>
   </div>
 </div>

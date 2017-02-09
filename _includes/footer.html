@@ -2,7 +2,7 @@
   {% comment %} Alinhado como coluna devido a um bug no IE11 --> {% endcomment %}
   <div class="wrapper" data-cell="shrink">
     <h2>Orçamento</h2>
-    <form action="{{ site.baseurl }}/enviar_email.php" class="form-orcamento">
+    <form action="{{ site.baseurl }}/enviar_email.php" method="post" class="form-orcamento">
       <div data-grid="spacing">
         <div data-cell="1of2">
           <label for="nome">Nome</label><input type="text" name="nome" required placeholder="Digite seu nome completo">
