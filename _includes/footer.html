@@ -59,9 +59,9 @@
               {% if forloop.last == false %} / {% endif %}
             {% endfor %}
           </li>
-          <li data-grid="wrap spacing">
+          <li data-grid="center start wrap spacing">
             <a data-cell="shrink" href="mailto:{{ site.data.contato.email }}">{{ site.data.contato.email }}</a>
-            <a data-cell="shrink" href="#orcamento">Solicite um orçamento</a>
+            <a data-cell="shrink" href="#orcamento" data-btn="laranja">Solicite um orçamento</a>
           </li>
         </ul>
       </div>
