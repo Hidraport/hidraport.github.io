@@ -9,7 +9,7 @@ if ($_POST['nome'] !== '' && $_POST['email'] !== '' && $_POST['telefone'] !== ''
 	$telefone = $_POST['telefone'];
 	$mensagem = $_POST['mensagem'];
 	$email_remetente = "contato@$my_domain"; // deve ser uma conta de email do seu dominio
-	$email_destinatario = "hidraport@uol.com.br";//"contato@$my_domain"; // pode ser qualquer email que receberá as mensagens
+	$email_destinatario = "hidraport@hidraport.com.br";//"contato@$my_domain"; // pode ser qualquer email que receberá as mensagens
 	$email_reply = "$email";
 	$email_assunto = "Contato do site $my_domain"; // Este será o assunto da mensagem
 	$isOrc = false;

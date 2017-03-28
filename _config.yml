@@ -12,6 +12,7 @@ url: "http://hidraport.com.br" # the base hostname & protocol for your site
 exclude: 
   - gulpfile.js
   - README.md
+  - desktop.ini
 markdown: kramdown
 
 sass:

@@ -54,7 +54,7 @@
           <li>Tel.: 
             {% for tel in site.data.contato.telefones %}
               {% if tel.number %}<a href="tel:{{ tel.number }}">{% endif %}
-                <span data-block="inline">{{ tel.label }}</span>
+                {{ tel.label }}
               {% if tel.number %}</a>{% endif %}
               {% if forloop.last == false %} / {% endif %}
             {% endfor %}
@@ -62,7 +62,6 @@
           <li data-grid="wrap spacing">
             <a data-cell="shrink" href="mailto:{{ site.data.contato.email }}">{{ site.data.contato.email }}</a>
             <a data-cell="shrink" href="#orcamento">Solicite um orçamento</a>
-            <a data-cell="shrink" href="{{ site.data.contato.facebook }}" target="_blank" onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Rodapé');">Siga nossa fan page</a>
           </li>
         </ul>
       </div>
@@ -78,6 +77,9 @@
                 <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu-title }}</a></li>
               {% endif %}
             {% endfor %}
+            <li>
+              <a data-cell="shrink" href="{{ site.data.contato.facebook }}" target="_blank" onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Rodapé');">Facebook</a>
+            </li>
           </ul>
         </div>
       </div>
