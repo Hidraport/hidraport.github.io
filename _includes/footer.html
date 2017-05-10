@@ -60,8 +60,8 @@
             {% endfor %}
           </li>
           <li data-grid="center start wrap spacing">
-            <a data-cell="shrink" href="mailto:{{ site.data.contato.email }}">{{ site.data.contato.email }}</a>
-            <a data-cell="shrink" href="#orcamento" data-btn="laranja">Solicite um orçamento</a>
+            <a data-cell="shrink" href="mailto:{{ site.data.contato.email }}" onclick="ga('send', 'event', 'Contato', 'Clique no e-mail', 'Rodapé');">{{ site.data.contato.email }}</a>
+            <a data-cell="shrink" href="#orcamento" data-btn="laranja" onclick="ga('send', 'event', 'Contato', 'Abrir formulário', 'Rodapé');">Solicite um orçamento</a>
           </li>
         </ul>
       </div>
