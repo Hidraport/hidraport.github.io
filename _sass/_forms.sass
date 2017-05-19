@@ -1,9 +1,9 @@
-
+$form-border-radius: 4px
 %form-basis
 	padding: .5em
 	font-size: $base-font-size
 	border: 1px solid $grey-color-light
-	border-radius: 4px
+	border-radius: $form-border-radius
 	background-color: #fff
 	transition: .3s ease-in-out
 	outline: none
@@ -76,3 +76,22 @@ button
 		background-color: $brand-color
 		color: #fff
 
+.form-search
+	&-label
+		font-weight: bold
+		text-transform: uppercase
+	&-control
+		margin: 0
+		button
+			@extend %form-basis
+			cursor: pointer
+		> *
+			border-radius: 0
+			border-color: $grey-color-light
+			&:hover, &:focus
+				background-color: transparent
+				border-color: $brand-color
+			&:first-child
+				border-radius: $form-border-radius 0 0 $form-border-radius
+			&:last-child
+				border-radius: 0 $form-border-radius $form-border-radius 0

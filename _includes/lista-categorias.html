@@ -1,4 +1,5 @@
 <nav class="lista-categorias" data-cell="1of4">
+  {% include search-form.html size = 'small' %}
 	<header><h4>Categorias</h4></header>
   {% for categoria in site.categorias %}
     <article class="lista-categorias-item">

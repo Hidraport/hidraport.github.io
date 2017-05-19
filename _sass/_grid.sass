@@ -108,14 +108,34 @@
 
     +variant(cols-2)
         flex-wrap: wrap
-
         > *
             display: inline-block
-
             +media-greater($on-palm)
                 flex-basis: 45%
                 flex-basis: calc(50% - #{$spacing-unit})
 
                 &:nth-child(even)
+                    margin-right: 0
+
+    +variant(cols-3)
+        flex-wrap: wrap
+        > *
+            display: inline-block
+            +media-greater($on-palm)
+                flex-basis: 26%
+                flex-basis: calc(33.333% - #{$spacing-unit})
+
+                &:nth-child(3n)
+                    margin-right: 0
+
+    +variant(cols-4)
+        flex-wrap: wrap
+        > *
+            display: inline-block
+            +media-greater($on-palm)
+                flex-basis: 21%
+                flex-basis: calc(25% - #{$spacing-unit})
+
+                &:nth-child(4n)
                     margin-right: 0
 

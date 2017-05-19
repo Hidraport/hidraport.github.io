@@ -1,0 +1,60 @@
+---
+layout: default
+title: Pesquisar produtos
+permalink: /pesquisar/
+excerpt: >
+    Informe o que você procura. Pesquise em nossa linha completa
+    de mangueiras hidráulicas e mangueiras industriais,
+    além de conexões e diversos outros produtos.
+---
+
+<section class="page-content search">
+    <div class="wrapper large">
+        <header class="post-header">
+            <h1 class="post-title">
+                <label for="q" class="form-search-label">Procurar produtos</label>
+            </h1>
+            {% include search-form.html %}
+        </header>
+        <div id="search-results">
+            <div class="page-content lista-categorias" data-grid="spacing cols-4">
+                {% for categoria in site.categorias %}
+                    <article class="lista-categorias-item">
+                    <a href="{{ site.baseurl }}{{ categoria.url }}"{% if page.url contains categoria.url %} class="selected"{% endif %}>{{ categoria.title }}</a>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="page-content">{% include fornecedores-logos.html %}</div>
+
+<script>
+    window.store = { {% for item in site.categorias %}
+        "{{ item.id | remove: '/produtos/' }}": {
+                title:   "{{ item.title }}",
+                img: '{% include img_from_url.html
+                        src = item.url
+                        alt = item.title
+                        format = 'jpg'
+                    %}',
+                content: "{{ item.content | strip_html | strip_newlines }}",
+                url:     "{{ item.url }}"
+            },
+    {% endfor %}{% for item in site.produtos %}
+        "{{ item.id | remove: '/produtos/' }}": {
+                title:   "{{ item.title }}",
+                img: '{% include img_from_url.html
+                        src = item.url
+                        alt = item.title
+                        format = 'jpg'
+                    %}',
+                content: "{{ item.content | strip_html | strip_newlines }}",
+                url:     "{{ item.url }}"
+            }{% if forloop.last == false %},{% endif %}
+    {% endfor %} };
+</script>
+
+<script src="{{ site.baseurl }}/js/lunr.min.js"></script>
+<script src="{{ site.baseurl }}/js/search.js"></script>
