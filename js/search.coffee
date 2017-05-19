@@ -52,4 +52,5 @@ if searchTerm
             url:     item.url
     
     results = index.search searchTerm
+    ga 'send', 'event', 'Pesquisa', searchTerm, decodeURIComponent location.search
     displaySearchResults results, window.store
