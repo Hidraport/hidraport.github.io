@@ -2,7 +2,7 @@
 title: Correntes Zebradas
 ---
 
-Corrente Zebrada para isolamento de áreas.
+Correntes plásticas confeccionadas em polipropileno de alta resistência, sendo o produto mais utilizado em demarcação de área.
 
 Elo Pequeno PVC 05 mm, amarela/preta (28x21x0,05)
 
