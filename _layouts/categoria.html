@@ -35,7 +35,7 @@ layout: default
               </div>
               <div data-cell="2of3">
                 <h4><a href="{{ site.baseurl }}{{ p.url }}" class="post-title">{{ p.title }}</a></h4>
-                <p>{{ p.excerpt | truncatewords: 12 }}</p>
+                <p>{{ p.content | markdownify | strip_html | strip_newlines | truncatewords: 12 }}</p>
               </div>
             </div>
             <footer data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja" data-orc-value="{{ p.title }}">ADICIONAR AO ORÇAMENTO</a></footer>
