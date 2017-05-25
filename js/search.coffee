@@ -19,7 +19,7 @@ displaySearchResults = ( results, store ) ->
         resultsArr = results.map (result) ->
             item = store[result.ref]
             img = if item.img.trim() then '<div data-cell="1of4">' + item.img + '</div>' else ""
-            '<article class="card"><div data-grid="center spacing">' + img + '<div data-cell="2of3"><h4><a href="{{ site.baseurl }}' + item.url + '" class="post-title">' + item.title + '</a></h4><p>' + item.content.substring(0, 150) + ' <a href="{{ site.baseurl }}' + item.url + '" data-cell="shrink">Mais detalhes...</a></p></div></div><footer data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja" data-orc-value="' + item.title + '">ADICIONAR AO ORÇAMENTO</a></footer></article>'
+            '<article class="card ' + item.type + '"><div data-grid="center spacing">' + img + '<div data-cell="2of3"><h4><a href="{{ site.baseurl }}' + item.url + '" class="post-title">' + item.title + '</a></h4><p>' + item.content.substring(0, 150) + '... <a href="{{ site.baseurl }}' + item.url + '" data-cell="shrink">Saiba mais</a></p></div></div>' + item.cta + '</article>'
         searchResults.innerHTML = '<p>Resultados para <strong>' + searchTerm + '</strong></p>' + resultsArr.join ''
     else
         message = document.createElement 'p'
@@ -52,5 +52,5 @@ if searchTerm
             url:     item.url
     
     results = index.search searchTerm
-    ga 'send', 'event', 'Pesquisa', searchTerm, decodeURIComponent location.search
+    ga 'send', 'event', 'Pesquisa', searchTerm, _query 'ref'
     displaySearchResults results, window.store

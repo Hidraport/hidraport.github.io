@@ -31,19 +31,22 @@ excerpt: >
 <div class="page-content">{% include fornecedores-logos.html %}</div>
 
 <script>
-    window.store = { {% for item in site.categorias %}
+    window.store = { {% for item in site.categorias %}{% assign c_crumbs = item.url | split: '/' %}
         "{{ item.id | remove: '/produtos/' }}": {
+                type: 'categoria',
                 title:   "{{ item.title }}",
                 img: '{% include img_from_url.html
                         src = item.url
                         alt = item.title
                         format = 'jpg'
                     %}',
-                content: "{{ item.content | strip_html | strip_newlines }}",
+                content: '{{ item.content | strip_html | strip_newlines }}',
+                cta: '<p data-grid="row wrap start small-spacing">{% for p in site.produtos %}{% assign p_crumbs = p.url | split: '/' %}{% if p_crumbs[2] == c_crumbs[2] %}<a href="{{ site.baseurl }}{{ p.url }}" data-cell="shrink" data-btn>{{ p.title }}</a>{% endif %}{% endfor %}</p>',
                 url:     "{{ item.url }}"
             },
     {% endfor %}{% for item in site.produtos %}
         "{{ item.id | remove: '/produtos/' }}": {
+                type: 'produto',
                 title:   "{{ item.title }}",
                 img: '{% include img_from_url.html
                         src = item.url
@@ -51,6 +54,7 @@ excerpt: >
                         format = 'jpg'
                     %}',
                 content: "{{ item.content | strip_html | strip_newlines }}",
+                cta: '<footer data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja" data-orc-value="{{ item.title }}">ADICIONAR AO ORÇAMENTO</a></footer>',
                 url:     "{{ item.url }}"
             }{% if forloop.last == false %},{% endif %}
     {% endfor %} };
