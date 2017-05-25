@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /erros
+Disallow: /css
+Disallow: /js
+Disallow: /pesquisar
+Disallow: /email_com_erro.html
+Disallow: /email_incompleto.html
+Disallow: /email_enviado.html
+Disallow: /enviar_email.php
+Disallow: /orcamento_enviado.html
+Sitemap: http://hidraport.com.br/sitemap.xml
