@@ -41,7 +41,7 @@ excerpt: >
                         format = 'jpg'
                     %}',
                 content: '{{ item.content | strip_html | strip_newlines }}',
-                cta: '<p data-grid="row wrap start small-spacing">{% for p in site.produtos %}{% assign p_crumbs = p.url | split: '/' %}{% if p_crumbs[2] == c_crumbs[2] %}<a href="{{ site.baseurl }}{{ p.url }}" data-cell="shrink" data-btn>{{ p.title }}</a>{% endif %}{% endfor %}</p>',
+                cta: '<p data-grid="row wrap start small-spacing">{% for p in site.produtos %}{% assign p_crumbs = p.url | split: '/' %}{% if p_crumbs[2] == c_crumbs[2] %}<a href="{{ site.baseurl }}{{ p.url }}" data-cell="shrink">{{ p.title }}</a>{% endif %}{% endfor %}</p>',
                 url:     "{{ item.url }}"
             },
     {% endfor %}{% for item in site.produtos %}
