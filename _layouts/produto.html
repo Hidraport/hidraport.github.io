@@ -22,8 +22,12 @@ layout: default
       {{ content }}
 
       <p data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja" data-orc-value="{{ page.title }}">ADICIONAR AO ORÇAMENTO</a></p>
+
+      <h3><label for="q" class="form-search-label">Procurar produtos</label></h3>
+      {% include search-form.html ref = 'Detalhes do produto' %}
       
       <aside>
+
         <h3>Produtos relacionados</h3>
         <div data-grid="wrap">
           {% for p in site.produtos %}
@@ -46,9 +50,6 @@ layout: default
           {% endfor %}
         </div>
       </aside>
-
-      <h2><label for="q" class="form-search-label">Procurar produtos</label></h2>
-      {% include search-form.html %}
 
     </div>
     {% include lista-categorias.html %}

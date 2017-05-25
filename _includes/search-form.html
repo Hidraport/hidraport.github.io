@@ -1,5 +1,5 @@
 <form action="{{ site.baseurl }}/pesquisar/" method="get" class="form-search">
-    <input type="hidden" name="ref" value="{{ page.url }}">
+    <input type="hidden" name="ref" value="{{ page.url }} {{ include.ref }}">
     {% if include.size == 'small' %}<label for="q" class="form-search-label">Procurar produtos</label>{% endif %}
     <p data-grid class="form-search-control">
         <input type="search" name="q" required placeholder="{% if include.size == 'small' %}Digite...{% else %}Digite a sua pesquisa...{% endif %}">
