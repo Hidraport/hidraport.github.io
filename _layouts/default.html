@@ -13,28 +13,11 @@ layout: compress
 
     {{ content }}
 
+    {% include contato.html %}
+
     {% include footer.html %}
 
-    <script src="{{ site.baseurl }}/js/main.js"></script>
-
-    {% if page.ga_code %}{{ page.ga_code }}{% else %}
-
-    <script type="text/javascript">
-      /* <![CDATA[ */
-      var google_conversion_id = 999281238;
-      var google_custom_params = window.google_tag_params;
-      var google_remarketing_only = true;
-      /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-      <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/999281238/?guid=ON&amp;script=0"/>
-      </div>
-    </noscript>
-
-    {% endif %}
+    {% include scripts.html %}
 
   </body>
 

@@ -110,7 +110,8 @@
     margin-bottom: $spacing-unit / 2
 
 .page-content
-    padding: $spacing-unit 0
+    padding-top: $spacing-unit
+    padding-bottom: $spacing-unit
 
 .post-meta
     font-size: $small-font-size
@@ -130,15 +131,12 @@
     margin-bottom: $spacing-unit
 
     >
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre, .inner
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre
             @extend .wrapper
         ul
             @extend .wrapper
             +media-greater($on-laptop)
                 padding-left: $spacing-unit * 1.5
-
-    .inner, .pull
-        @extend %vertical-rhythm
 
 .card
     padding: $spacing-unit / 4

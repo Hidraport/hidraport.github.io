@@ -18,11 +18,35 @@
       <div class="trigger">
         {% assign crumbs = page.url | split: '/' %}
         <a href="{{ site.baseurl }}/" class="page-link{% if crumbs.size == 0 %} selected{% endif %}">Início</a>
-        {% for my_page in site.pages %}
+
+        {% assign pages = site.pages | sort: 'position' %}
+        {% for my_page in pages %}
           {% if my_page.menu-title %}
-          <a class="page-link{% if my_page.url contains crumbs[1] %} selected{% endif %}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu-title }}</a>
+            <a
+              class="page-link
+                {% if my_page.url contains crumbs[1] %}
+                  selected
+                {% endif %}"
+              href="{{ my_page.url | prepend: site.baseurl }}"
+            >{{ my_page.menu-title }}</a>
           {% endif %}
         {% endfor %}
+
+        <a
+          href="{{ site.baseurl }}/aplicacoes/"
+          class="page-link
+          {% if crumbs[1] == 'aplicacoes' %}
+            selected
+          {% endif %}"
+        >Aplicações</a>
+        <a
+          href="{{ site.baseurl }}/produtos/"
+          class="page-link
+          {% if crumbs[1] == 'produtos' or crumbs[1] == 'categorias' %}
+            selected
+          {% endif %}"
+        >Produtos</a>
+
         <a href="#orcamento" class="page-link" onclick="ga('send', 'event', 'Contato', 'Abrir formulário', 'Barra de navegação superior');">Orçamento</a>
         <a href="{{ site.data.contato.facebook }}" target="_blank" class="page-link" onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Barra de navegação superior');">Facebook</a>
       </div>

@@ -20,22 +20,29 @@ collections:
 defaults:
 - scope:
     path: ''
+    type: pages
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+- scope:
+    path: ''
     type: aplicacoes
   values:
     layout: page
-    permalink: aplicacoes/:path/
 - scope:
     path: ''
     type: categorias
   values:
     layout: categoria
-    permalink: produtos/:path/
 - scope:
     path: ''
     type: produtos
   values:
     layout: produto
-    permalink: produtos/:path/
 description: 'LOJA DE FÁBRICA, especializada no fornecimento de mangueiras  e conexões
   desde 2007. Fabricamos e distribuímos materiais para  manutenção e montagem industrial
   em toda a região da Baixada Santista.  Atendemos empresas dos setores metalúrgico,
@@ -45,6 +52,7 @@ description: 'LOJA DE FÁBRICA, especializada no fornecimento de mangueiras  e c
 '
 baseurl: ''
 url: http://hidraport.com.br
+permalink: :pretty/
 exclude:
 - gulpfile.js
 - README.md
