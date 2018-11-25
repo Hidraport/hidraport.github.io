@@ -20,6 +20,16 @@ collections:
 defaults:
 - scope:
     path: ''
+    type: pages
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+- scope:
+    path: ''
     type: aplicacoes
   values:
     layout: page
