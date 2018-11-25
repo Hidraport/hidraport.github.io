@@ -1,6 +1,3 @@
----
----
-
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.hidraport.com.br$ [NC]
 RewriteRule ^(.*)$ http://hidraport.com.br/$1 [R=301,L]

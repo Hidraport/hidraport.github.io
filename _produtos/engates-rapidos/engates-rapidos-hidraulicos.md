@@ -6,6 +6,4 @@ São utilizados em circuitos hidráulicos para altas pressões. Fabricados em a�
 
 Engates rápidos hidráulicos permitem acoplamentos e desacoplamentos sem uso de ferramentas, com perfeita vedação. Possuem vedações em Buna ou Viton (para altas temperaturas).
 
-![engate rapido hidraulico]()
-
 Os engates rápidos hidráulicos são utilizados em equipamentos rodoviários, terraplanagem, mecanização agrícola, máquinas de transportes, máquinas injetoras e operatrizes, nas indústrias químicas, petroquímicas, siderúrgicas, naval, elétrica, enfim, em todos os sistemas pneumáticos e hidráulicos, onde se faz necessário engates rápidos, conexões, equipamentos para ar comprimido, lavagem e lubrificação. Consutem-nos.
