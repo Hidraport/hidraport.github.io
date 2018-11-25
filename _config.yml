@@ -41,6 +41,7 @@ defaults:
 - scope:
     path: ''
     type: produtos
+    categoria: 
   values:
     layout: produto
 description: 'LOJA DE FÁBRICA, especializada no fornecimento de mangueiras  e conexões
