@@ -50,7 +50,7 @@ description: 'LOJA DE FÁBRICA, especializada no fornecimento de mangueiras  e c
   outros.
 
 '
-baseurl: ''
+baseurl: 
 url: http://hidraport.com.br
 permalink: :pretty/
 exclude:
