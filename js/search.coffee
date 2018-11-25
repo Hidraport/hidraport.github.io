@@ -1,7 +1,6 @@
 ---
 ---
 
-
 $ = (selector) ->
 	document.querySelectorAll(selector)
 _ = (nodeList, fn) ->

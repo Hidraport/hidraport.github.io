@@ -1,50 +1,56 @@
+---
 title: HIDRA-PORT Comércio de Peças e Equipamentos Hidráulicos © 2013
-description: >
-  LOJA DE FÁBRICA, especializada no fornecimento de mangueiras 
-  e conexões desde 2007. Fabricamos e distribuímos materiais para 
-  manutenção e montagem industrial em toda a região da Baixada Santista. 
-  Atendemos empresas dos setores metalúrgico, químico, siderúrgico, 
-  de autopeças, plásticos, papeleiros, de navegação, entre outros.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://hidraport.com.br" # the base hostname & protocol for your site
-
-# Build settings
-exclude: 
-  - gulpfile.js
-  - README.md
-  - desktop.ini
-markdown: kramdown
-
-sass:
-  style: compressed
-
-plugins:
-  - jekyll-coffeescript
-
+timezone: UTC
 collections:
   aplicacoes:
+    title: Aplicacoes
     output: false
   categorias:
+    title: Categorias
+    output: true
+  posts:
+    title: Posts
     output: true
   produtos:
+    title: Produtos
     output: true
-
+  uploads:
+    title: Uploads
+    output: true
 defaults:
-  - scope:
-      path: ""
-      type: aplicacoes
-    values:
-      layout: page
-      permalink: aplicacoes/:path/
-  - scope:
-      path: ""
-      type: categorias
-    values:
-      layout: categoria
-      permalink: produtos/:path/
-  - scope:
-      path: ""
-      type: produtos
-    values:
-      layout: produto
-      permalink: produtos/:path/
+- scope:
+    path: ''
+    type: aplicacoes
+  values:
+    layout: page
+    permalink: aplicacoes/:path/
+- scope:
+    path: ''
+    type: categorias
+  values:
+    layout: categoria
+    permalink: produtos/:path/
+- scope:
+    path: ''
+    type: produtos
+  values:
+    layout: produto
+    permalink: produtos/:path/
+description: 'LOJA DE FÁBRICA, especializada no fornecimento de mangueiras  e conexões
+  desde 2007. Fabricamos e distribuímos materiais para  manutenção e montagem industrial
+  em toda a região da Baixada Santista.  Atendemos empresas dos setores metalúrgico,
+  químico, siderúrgico,  de autopeças, plásticos, papeleiros, de navegação, entre
+  outros.
+
+'
+baseurl: ''
+url: http://hidraport.com.br
+exclude:
+- gulpfile.js
+- README.md
+- desktop.ini
+markdown: kramdown
+sass:
+  style: compressed
+plugins:
+- jekyll-coffeescript

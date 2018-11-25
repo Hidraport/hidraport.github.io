@@ -1,10 +1,13 @@
 ---
-layout: page
 title: Aplicações
+permalink: "/aplicacoes/"
+layout: page
 menu-title: Aplicações
-permalink: /aplicacoes/
-excerpt: >
-  Conheça a participação que os nossos produtos têm em todas as áreas. Atendemos os setores metalúrgico, químico, siderúrgico, de autopeças, plásticos, papeleiros, de navegação, e outros.
+excerpt: 'Conheça a participação que os nossos produtos têm em todas as áreas. Atendemos
+  os setores metalúrgico, químico, siderúrgico, de autopeças, plásticos, papeleiros,
+  de navegação, e outros.
+
+'
 ---
 
 {% for app in site.aplicacoes %}

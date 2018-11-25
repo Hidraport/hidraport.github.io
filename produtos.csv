@@ -1,5 +1,6 @@
 ---
 ---
+
 Título,URL,Descrição{% for item in site.categorias %}
 "{{ item.title }}","{{ site.url }}{{ site.baseurl }}{{ item.url }}","{{ item.content | strip_html | strip_newlines }}"{% endfor %}{% for item in site.produtos %}
 "{{ item.title }}","{{ site.url }}{{ site.baseurl }}{{ item.url }}","{{ item.content | strip_html | strip_newlines }}"{% endfor %}
