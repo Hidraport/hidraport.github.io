@@ -23,19 +23,16 @@ defaults:
     type: aplicacoes
   values:
     layout: page
-    permalink: aplicacoes/:path/
 - scope:
     path: ''
     type: categorias
   values:
     layout: categoria
-    permalink: produtos/:path/
 - scope:
     path: ''
     type: produtos
   values:
     layout: produto
-    permalink: produtos/:path/
 description: 'LOJA DE FÁBRICA, especializada no fornecimento de mangueiras  e conexões
   desde 2007. Fabricamos e distribuímos materiais para  manutenção e montagem industrial
   em toda a região da Baixada Santista.  Atendemos empresas dos setores metalúrgico,
