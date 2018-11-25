@@ -26,38 +26,6 @@ Somos uma empresa constantemente preocupada com melhorias internas e aperfeiçoa
 
 ---
 
-## Bancada de teste
-
-### Trazendo tecnologia no atendimento aos clientes
-
-![Mesa de testes aberta]({{ site.baseurl }}/img/produtos/mesa-de-teste-aberta-1.jpg)
-
-<div class="wrapper" data-grid="center spacing">
-  <div data-cell="1of3"><img src="{{ site.baseurl }}/img/produtos/mesa-de-teste-painel.jpg" alt="Painel da mesa de testes"></div>
-  <div data-cell="2of3">
-    <p>Contamos com uma bancada de teste hidrostático com capacidade de 35.000 PSI.</p>
-    <p>Testes de capacidade de trabalho ou ruptura são realizados quase diariamente.</p>
-  </div>
-</div>
-
----
-
-## Nossos produtos
-
-Oferecemos uma linha diversificada de mangueiras hidráulicas e mangueiras industriais, além de conexões de diversos tipos:
-
-- Mangueiras Hidráulicas para Baixa, Média, Alta e Super Alta Pressão;
-- Mangueiras Industriais em Borracha ou PVC;
-- Mangueiras Espiraladas;
-- Conexões Hidráulicas;
-- Conexões em Latão;
-- Conexões Pneumáticas;
-- Conexões Galvanizadas.
-
-Atendemos empresas dos setores metalúrgicos, auto-peças, siderúrgicos, plásticos, papeleiros, químicos, de navegação entre outros. Além da linha de mangueiras e conexões, dispomos de uma linha completa de correias industriais, abraçadeiras, fitas adesivas, colas e silicones, manômetros, válvulas e registros, engates rápidos, tubos, flexíveis metálicos, lubrificantes e equipamentos de segurança, a HIDRA-PORT é uma empresa de produtos para montagem e manutenção industrial.
-
----
-
 ## A Fábrica
 
 <div data-grid="center spacing" class="page-content wrapper large">
