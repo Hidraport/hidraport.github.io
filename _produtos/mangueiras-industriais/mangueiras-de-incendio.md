@@ -1,5 +1,7 @@
 ---
 title: Mangueiras de incêndio
+categoria: Mangueiras industriais
+image: "/uploads/mangueiras-de-incendio.jpg"
 ---
 
 Mangueira para hidrante ou também conhecida como mangueira para incêndio, possui reforço têxtil, confeccionado 100% em fio de poliéster de alta tenacidade. A Hidra-Port disponibiliza mangueiras para incêndio na cor branca com tubo interno de borracha sintética e montadas com conexões união tipo storz.
