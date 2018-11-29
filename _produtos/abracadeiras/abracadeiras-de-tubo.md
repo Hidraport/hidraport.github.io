@@ -1,5 +1,7 @@
 ---
 title: Abraçadeiras de tubo
+categoria: Abraçadeiras
+image: "/uploads/abracadeiras-de-tubo.jpg"
 ---
 
 abraçadeira de tubo
