@@ -13,11 +13,7 @@ excerpt: Conheça a participação que os nossos produtos têm em todas as área
 
 <div data-grid="center spacing" class="wrapper large">
     <div data-cell="1of3{% cycle '', ' order-1' %}">
-        {% include img_from_url.html
-            src = app.url
-            alt = app.title
-            format = 'jpg'
-        %}
+        <img src="{{ site.baseurl }}{{ app.image }}" alt="{{ app.title }}">
     </div>
     <div data-cell="2of3">
         <p>{{ app.content }}</p>
