@@ -1,5 +1,7 @@
 ---
 title: Capas de chuva
+categoria: Equipamentos de segurança
+image: "/uploads/capas-de-chuva.jpg"
 ---
 
 Capas para motociclistas, composta de calça e blusa com capuz, na cor preta, com manga comprida, embalada em uma bolsa.
