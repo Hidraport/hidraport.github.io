@@ -1,5 +1,7 @@
 ---
 title: Abraçadeiras de nylon
+categoria: Abraçadeiras
+image: "/uploads/abracadeiras-de-nylon.jpg"
 ---
 
 Abraçadeiras em Nylon, super resistente, sistema simples e prático p/ amarração. Conhecidas também como enforca gato, insulok, tarape, cinta plástica ou fita plástica
