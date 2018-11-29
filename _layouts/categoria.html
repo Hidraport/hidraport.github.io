@@ -8,13 +8,6 @@ layout: default
 
   <div class="wrapper large" data-grid="spacing">
     <div class="produto" data-cell="3of4">
-      <div data-cell="1of4">
-        {% include img_from_url.html
-          src = page.url
-          alt = page.title
-          format = 'jpg'
-        %}
-      </div>
       <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
         {{ content }}
@@ -26,12 +19,7 @@ layout: default
           <article class="card">
             <div data-grid="center spacing">
               <div data-cell="shrink">
-                {% include img_from_url.html
-                  src = p.url
-                  alt = p.title
-                  format = 'jpg'
-                  width = 150
-                %}
+                <img src="{{ site.baseurl }}{{ p.image }}" alt="{{ p.title }}" width="150">
               </div>
               <div data-cell="2of3">
                 <h4><a href="{{ site.baseurl }}{{ p.url }}" class="post-title">{{ p.title }}</a></h4>

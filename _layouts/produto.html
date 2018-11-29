@@ -13,11 +13,7 @@ layout: default
         <p data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja" data-orc-value="{{ page.title }}">ADICIONAR AO ORÇAMENTO</a></p>
       </header>
 
-      {% include img_from_url.html
-        src = page.url
-        alt = page.title
-        format = 'jpg'
-      %}
+      <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.title }}">
 
       {{ content }}
 
@@ -35,12 +31,7 @@ layout: default
             {% if page_crumbs[2] == p_crumbs[2] and page.url != p.url %}
               <div data-grid="column center justify" data-cell="1of4" class="card">
                 <span class="card-pic">
-                  {% include img_from_url.html
-                    src = p.url
-                    alt = p.title
-                    format = 'jpg'
-                    width = 150
-                  %}
+                  <img src="{{ site.baseurl }}{{ p.image }}" alt="{{ p.title }}" width="150">
                 </span>
                 <a href="{{ site.baseurl }}{{ p.url }}" data-cell="shrink">
                   {{ p.title }}

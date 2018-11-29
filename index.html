@@ -3,12 +3,16 @@ layout: default
 features:
 - title: Correias
   link: "/produtos/borrachas-cordas-e-correias/correias/"
+  img: "/uploads/destaques-correias.jpg"
 - title: Ferramentas
   link: "/produtos/ferramentas-tramontina/"
+  img: "/uploads/destaques-ferramentas-tramontina.jpg"
 - title: Óleos
   link: "/produtos/lubrificacao/oleos/"
+  img: "/uploads/destaques-oleos.jpg"
 - title: EPIs
   link: "/produtos/equipamentos-de-seguranca/"
+  img: "/uploads/destaques-equipamentos-de-seguranca.jpg"
 ---
 
 <section class="section-hero" data-grid="center">
@@ -31,13 +35,7 @@ features:
     {% for produto in page.features %}
       <div data-grid="column justify" class="card">
           <div data-grid="center" class="feature-fig">
-            {% assign src = produto.link | prepend: "/destaques" %}
-            {% include img_from_url.html 
-              src = src
-              alt = produto.title
-              width = 200
-              format = 'jpg'
-            %}
+            <img src="{{ site.baseurl }}{{ produto.img }}" alt="{{ produto.title }}" width="200">
           </div>
           <h6 data-cell="shrink" class="feature-title"><a href="{{ site.baseurl }}{{ produto.link }}">{{ produto.title }}</a></h6>
         </div>
