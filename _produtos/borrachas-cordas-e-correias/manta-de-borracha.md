@@ -1,5 +1,7 @@
 ---
 title: Manta de borracha
+categoria: Borrachas, cordas e correias
+image: "/uploads/manta-de-borracha.jpg"
 ---
 
 As mantas de borracha são materiais essenciais em locais que contam com tensões elétricas, baixas, médias ou altas. Dessa forma, a manta garante proteção à integridade física dos trabalhadores e frequentadores das instalações.
