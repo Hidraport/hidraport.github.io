@@ -9,9 +9,13 @@
           <li>{{ site.endereco }}</li>
           <li>Tel.: 
             {% for tel in site.telefones %}
-              {% if tel.number %}<a href="tel:{{ tel.number }}" onclick="ga('send', 'event', 'Contato', 'Telefone no rodapé', '{{ tel.label }}');">{% endif %}
+              {% if tel.number %}
+                <a href="tel:{{ tel.number }}" class="footer-tel" onclick="ga('send', 'event', 'Contato', 'Telefone no rodapé', '{{ tel.label }}');">
                 {{ tel.label }}
-              {% if tel.number %}</a>{% endif %}
+                </a>
+              {% else %}
+                <span class="footer-tel">{{ tel.label }}</span>
+              {% endif %}
               {% if forloop.last == false %} / {% endif %}
             {% endfor %}
           </li>
