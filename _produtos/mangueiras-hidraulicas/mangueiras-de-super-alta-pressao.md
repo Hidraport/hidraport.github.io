@@ -1,5 +1,7 @@
 ---
 title: Mangueiras de super alta pressão
+categoria: Mangueiras hidráulicas
+image: "/uploads/mangueiras-de-super-alta-pressao.jpg"
 ---
 
 As mangueiras hidráulicas da Hidra-Port são fabricadas em borracha sintética com reforço de fio de aço para baixas, médias, altas e super altas pressões. Estas mangueiras hidráulicas são fabricadas nas seguintes normas: SAE R1 AT, SAE R2 AT, SAE R6, SAE R12, SAE R13, SAE R7.
