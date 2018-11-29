@@ -10,7 +10,8 @@ layout: default
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    {{ content }}
+    {% assign uploads_src = ' src="' | append: site.baseurl | append: '/uploads' %}
+    {{ content | replace: ' src="/uploads', uploads_src }}
   </div>
 
 </article>
