@@ -1,5 +1,7 @@
 ---
 title: Tubos galvanizados
+categoria: Tubos
+image: "/uploads/tubos-galvanizados.jpg"
 ---
 
 A Hidra-Port fornece tubos galvanizados de aço, fabricados conforme a Norma 5580 e amplamente utilizados no transporte de materiais sólidos, líquidos, pastosos ou gasosos.
