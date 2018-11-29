@@ -27,7 +27,7 @@ ga_code: |
 
 <p>Ou entre em contato:</p>
 <ul>
-  {% for tel in site.data.contato.telefones %}
+  {% for tel in site.telefones %}
     <li>{% if tel.number %}<a href="tel:{{ tel.number }}">{% endif %}{{ tel.label }}{% if tel.number %}</a>{% endif %}</li>
   {% endfor %}
 </ul>

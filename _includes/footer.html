@@ -6,9 +6,9 @@
       <div data-cell="1of2">
         <h2 class="footer-heading">{{ site.title }}</h2>
         <ul class="seamless">
-          <li>{{ site.data.contato.endereco }}</li>
+          <li>{{ site.endereco }}</li>
           <li>Tel.: 
-            {% for tel in site.data.contato.telefones %}
+            {% for tel in site.telefones %}
               {% if tel.number %}<a href="tel:{{ tel.number }}" onclick="ga('send', 'event', 'Contato', 'Telefone no rodapé', '{{ tel.label }}');">{% endif %}
                 {{ tel.label }}
               {% if tel.number %}</a>{% endif %}
@@ -16,7 +16,7 @@
             {% endfor %}
           </li>
           <li data-grid="center start wrap spacing">
-            <a data-cell="shrink" href="mailto:{{ site.data.contato.email }}" onclick="ga('send', 'event', 'Contato', 'Clique no e-mail', 'Rodapé');">{{ site.data.contato.email }}</a>
+            <a data-cell="shrink" href="mailto:{{ site.email }}" onclick="ga('send', 'event', 'Contato', 'Clique no e-mail', 'Rodapé');">{{ site.email }}</a>
             <a data-cell="shrink" href="#orcamento" data-btn="laranja" onclick="ga('send', 'event', 'Contato', 'Abrir formulário', 'Rodapé');">Solicite um orçamento</a>
           </li>
         </ul>
@@ -60,7 +60,7 @@
             </li>
 
             <li>
-              <a data-cell="shrink" href="{{ site.data.contato.facebook }}" target="_blank" onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Rodapé');">Facebook</a>
+              <a data-cell="shrink" href="{{ site.facebook }}" target="_blank" onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Rodapé');">Facebook</a>
             </li>
           </ul>
         </div>

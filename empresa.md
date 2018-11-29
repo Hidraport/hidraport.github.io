@@ -14,7 +14,7 @@ excerpt: 'Somos uma empresa constantemente preocupada com melhorias internas e a
     <div data-cell="1of2"><img src="{{ site.baseurl }}/img/empresa.jpg" alt="Loja Hidra-port"></div>
     <div data-cell="1of2">
         <p>A HIDRA-PORT Mangueiras e Conexões, LOJA DE FÁBRICA, é especializada no fornecimento de mangueiras e conexões desde 2007, fabricando e distribuindo materiais para manutenção e montagem industrial em toda a região da Baixada Santista. Atendemos empresas dos setores metalúrgico, químico, siderúrgico, de autopeças, plásticos, papeleiros, de navegação, entre outros.</p>
-        <p><a href="mailto:{{ site.data.contato.email }}" data-btn onclick="ga('send', 'event', 'Contato', 'Abrir formulário', 'Empresa - início do texto');">Fale conosco</a> <a href="{{ site.data.contato.facebook }}" data-btn="azul" target="_blank" onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Empresa - início do texto');">Siga-nos no Facebook</a></p>
+        <p><a href="mailto:{{ site.email }}" data-btn onclick="ga('send', 'event', 'Contato', 'Abrir formulário', 'Empresa - início do texto');">Fale conosco</a> <a href="{{ site.facebook }}" data-btn="azul" target="_blank" onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Empresa - início do texto');">Siga-nos no Facebook</a></p>
     </div>
 </div>
 
