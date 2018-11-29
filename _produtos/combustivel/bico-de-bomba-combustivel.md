@@ -1,5 +1,7 @@
 ---
 title: Bico de Bomba Combustível
+categoria: Combustível
+image: "/uploads/bico-de-bomba-combustivel.jpg"
 ---
 
 Características e benefícios:
