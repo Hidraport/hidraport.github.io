@@ -1,5 +1,7 @@
 ---
 title: Correias
+categoria: Borrachas, cordas e correias
+image: "/uploads/correias.jpg"
 ---
 
 Trabalhamos a linha de correias em "V", perfil A e B.
