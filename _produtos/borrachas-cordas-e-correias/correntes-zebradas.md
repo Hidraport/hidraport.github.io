@@ -1,5 +1,7 @@
 ---
 title: Correntes Zebradas
+categoria: Borrachas, cordas e correias
+image: "/uploads/correntes-zebradas.jpg"
 ---
 
 Correntes plásticas confeccionadas em polipropileno de alta resistência, sendo o produto mais utilizado em demarcação de área.
