@@ -17,8 +17,9 @@ displaySearchResults = ( results, store ) ->
     if results.length
         resultsArr = results.map (result) ->
             item = store[result.ref]
-            img = if item.img.trim() then '<div data-cell="1of4">' + item.img + '</div>' else ""
-            '<article class="card ' + item.type + '"><div data-grid="center spacing">' + img + '<div data-cell="2of3"><h4><a href="{{ site.baseurl }}' + item.url + '" class="post-title">' + item.title + '</a></h4><p>' + item.content.substring(0, 150) + '... <a href="{{ site.baseurl }}' + item.url + '" data-cell="shrink">Saiba mais</a></p></div></div>' + item.cta + '</article>'
+            img = if item.type is 'produto' then '<div data-cell="1of4"><img src="' + item.img + '" alt="' + item.title + '"></div>' else ""
+            description = if item.content?.trim() then '<p>' + item.content.substring(0, 150) + '... <a href="{{ site.baseurl }}' + item.url + '" data-cell="shrink">Saiba mais</a></p>' else ''
+            '<article class="card ' + item.type + '"><div data-grid="center spacing">' + img + '<div data-cell="2of3"><h4><a href="{{ site.baseurl }}' + item.url + '" class="post-title">' + item.title + '</a></h4>' + description + '</div></div>' + item.cta + '</article>'
         searchResults.innerHTML = '<p>Resultados para <strong>' + searchTerm + '</strong></p>' + resultsArr.join ''
     else
         message = document.createElement 'p'

@@ -20,7 +20,7 @@ excerpt: 'Informe o que você procura. Pesquise em nossa linha completa de mangu
             <div class="page-content lista-categorias" data-grid="spacing cols-4">
                 {% for categoria in site.categorias %}
                     <article class="lista-categorias-item">
-                    <a href="{{ site.baseurl }}{{ categoria.url }}"{% if page.url contains categoria.url %} class="selected"{% endif %}>{{ categoria.title }}</a>
+                    <a href="{{ site.baseurl }}{{ categoria.url }}">{{ categoria.title }}</a>
                     </article>
                 {% endfor %}
             </div>
@@ -35,11 +35,6 @@ excerpt: 'Informe o que você procura. Pesquise em nossa linha completa de mangu
         "{{ item.id | remove: '/produtos/' }}": {
                 type: 'categoria',
                 title:   "{{ item.title }}",
-                img: '{% include img_from_url.html
-                        src = item.url
-                        alt = item.title
-                        format = 'jpg'
-                    %}',
                 content: '{{ item.content | strip_html | strip_newlines }}',
                 cta: '<p data-grid="row wrap start spacing">{% for p in site.produtos %}{% assign p_crumbs = p.url | split: '/' %}{% if p_crumbs[2] == c_crumbs[2] %}<a href="{{ site.baseurl }}{{ p.url }}" data-cell="shrink">{{ p.title }}</a>{% endif %}{% endfor %}</p>',
                 url:     "{{ item.url }}"
@@ -48,11 +43,7 @@ excerpt: 'Informe o que você procura. Pesquise em nossa linha completa de mangu
         "{{ item.id | remove: '/produtos/' }}": {
                 type: 'produto',
                 title:   "{{ item.title }}",
-                img: '{% include img_from_url.html
-                        src = item.url
-                        alt = item.title
-                        format = 'jpg'
-                    %}',
+                img: '{{ item.image }}',
                 content: "{{ item.content | strip_html | strip_newlines }}",
                 cta: '<footer data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja" data-orc-value="{{ item.title }}">ADICIONAR AO ORÇAMENTO</a></footer>',
                 url:     "{{ item.url }}"

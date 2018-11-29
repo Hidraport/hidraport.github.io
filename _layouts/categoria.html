@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{% assign page_crumbs = page.url | split: '/' %}
-
 <section class="page-content post">
 
   <div class="wrapper large" data-grid="spacing">
@@ -13,22 +11,28 @@ layout: default
         {{ content }}
       </header>
 
-      {% for p in site.produtos %}
-        {% assign p_crumbs = p.url | split: '/' %}
-        {% if page_crumbs[2] == p_crumbs[2] and page.url != p.url %}
-          <article class="card">
-            <div data-grid="center spacing">
-              <div data-cell="shrink">
-                <img src="{{ site.baseurl }}{{ p.image }}" alt="{{ p.title }}" width="150">
-              </div>
-              <div data-cell="2of3">
-                <h4><a href="{{ site.baseurl }}{{ p.url }}" class="post-title">{{ p.title }}</a></h4>
-                <p>{{ p.content | markdownify | strip_html | strip_newlines | truncatewords: 12 }}</p>
-              </div>
+      {% assign produtos = site.produtos | where: 'categoria', page.title %}
+      {% for p in produtos %}
+
+        <article class="card">
+
+          <div data-grid="center spacing">
+
+            <div data-cell="shrink">
+              <img src="{{ site.baseurl }}{{ p.image }}" alt="{{ p.title }}" width="150">
             </div>
-            <footer data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja" data-orc-value="{{ p.title }}">ADICIONAR AO ORÇAMENTO</a></footer>
-          </article>
-        {% endif %}
+
+            <div data-cell="2of3">
+              <h4><a href="{{ site.baseurl }}{{ p.url }}" class="post-title">{{ p.title }}</a></h4>
+              <p>{{ p.content | markdownify | strip_html | strip_newlines | truncatewords: 12 }}</p>
+            </div>
+
+          </div>
+
+          <footer data-grid="end"><a href="#orcamento" data-cell="shrink" data-btn="laranja" data-orc-value="{{ p.title }}">ADICIONAR AO ORÇAMENTO</a></footer>
+
+        </article>
+
       {% endfor %}
 
     </div>
