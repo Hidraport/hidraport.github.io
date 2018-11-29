@@ -1,5 +1,7 @@
 ---
 title: Cordas
+categoria: Borrachas, cordas e correias
+image: "/uploads/cordas.jpg"
 ---
 
 Podem ser de diversos tipos:
