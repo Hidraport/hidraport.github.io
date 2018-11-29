@@ -1,5 +1,7 @@
 ---
 title: Engates rápidos hidráulicos
+categoria: Engates rápidos
+image: "/uploads/engates-rapidos-hidraulicos.jpg"
 ---
 
 São utilizados em circuitos hidráulicos para altas pressões. Fabricados em aço carbono ou inox, os engates rápidos hidráulicos estão disponíveis nas medidas de 1/4 NPT ou BSP á 1.1/2 NPT ou BSP. Disponíveis nas linhas hidráulicas, agrícolas, face plana e rosqueamento manual (para super alta pressões).
