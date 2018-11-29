@@ -1,5 +1,7 @@
 ---
 title: Faixas adesivas
+categoria: Adesivos, colas e silicones
+image: "/uploads/faixas-adesivas.jpg"
 ---
 
 Fita Refletiva para Traseira - Branco-Vermelho - 3M
