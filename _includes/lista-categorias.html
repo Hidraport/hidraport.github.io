@@ -1,9 +1,30 @@
 <nav class="lista-categorias" data-cell="1of4">
+
   {% include search-form.html size = 'small' ref = 'Menu lateral' %}
+
 	<header><h4>Categorias</h4></header>
+
   {% for categoria in site.categorias %}
+
+    {% capture class_attr %}
+      {% if page.url == categoria.url %}
+        class="selected"
+      {% elsif page.categoria == categoria.title %}
+        class="selected"
+      {% endif %}
+    {% endcapture %}
+
+    {% assign class_attr = class_attr | strip %}
+
     <article class="lista-categorias-item">
-      <a href="{{ site.baseurl }}{{ categoria.url }}"{% if page.url contains categoria.url %} class="selected"{% endif %}>{{ categoria.title }}</a>
+      <a
+        href="{{ site.baseurl }}{{ categoria.url }}"
+        {{ class_attr }}
+      >
+        {{ categoria.title }}
+      </a>
     </article>
+
   {% endfor %}
+
 </nav>

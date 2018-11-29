@@ -28,6 +28,8 @@ layout: default
           {% assign outros_produtos = site.produtos | where: 'categoria', page.categoria %}
           {% for p in outros_produtos %}
 
+            {% if p.url != page.url %}
+
               <div data-grid="column center justify" data-cell="1of4" class="card">
                 <span class="card-pic">
                   <img src="{{ site.baseurl }}{{ p.image }}" alt="{{ p.title }}" width="150">
@@ -36,6 +38,8 @@ layout: default
                   {{ p.title }}
                 </a>
               </div>
+
+            {% endif %}
 
           {% endfor %}
 

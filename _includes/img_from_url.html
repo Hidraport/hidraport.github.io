@@ -1,7 +1,0 @@
-{% assign img_url = '/img' | append: include.src | append: '§' | remove: '/§' | remove: '.html§' | append: '.' | append: include.format %}
-
-{% for static_file in site.static_files %}
-  {% if static_file.path == img_url %}
-		<img src="{{ site.baseurl }}{{ img_url }}" alt="{{ include.alt }}"{% if include.width %} width="{{ include.width }}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %}>
-	{% endif %}
-{% endfor %}

@@ -56,11 +56,7 @@ features:
       <div data-grid="spacing">
         <div class="slide-figure" data-cell="1of3" data-grid="center">
           <div data-cell="shrink">
-            {% include img_from_url.html
-              src = app.url
-              alt = app.title
-              format = "jpg"
-            %}
+            <img src="{{ app.image }}" alt ="{{ app.title }}">
           </div>
         </div>
         <div data-cell="2of3">
