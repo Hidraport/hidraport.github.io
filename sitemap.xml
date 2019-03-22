@@ -9,7 +9,7 @@ layout:
   {% for p in site.pages %}{% if p.menu-title %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ p.url }}</loc>
-    <lastmod>{{ site.time | date_to_rfc822 }}</lastmod>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -18,7 +18,7 @@ layout:
   {% for p in site.aplicacoes %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ p.url }}</loc>
-    <lastmod>{{ site.time | date_to_rfc822 }}</lastmod>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -27,7 +27,7 @@ layout:
   {% for p in site.categorias %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ p.url }}</loc>
-    <lastmod>{{ site.time | date_to_rfc822 }}</lastmod>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -36,7 +36,7 @@ layout:
   {% for p in site.produtos %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ p.url }}</loc>
-    <lastmod>{{ site.time | date_to_rfc822 }}</lastmod>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
