@@ -26,8 +26,24 @@ ga_code: |
 <p>Deseja solicitar outro orçamento? <a href="/produtos/">Volte para os produtos</a>.</p>
 
 <p>Ou entre em contato:</p>
+
+{% assign zap = site.whatsapp %}
+<p>
+  <a href="https://wa.me/{{ zap.number }}" target="_blank" onclick="ga('send', 'event', 'Contato', 'Após orçamento enviado', '{{ zap.label }}');">
+    {{ zap.label }}
+  </a>
+</p>
+
 <ul>
   {% for tel in site.telefones %}
-    <li>{% if tel.number %}<a href="tel:{{ tel.number }}">{% endif %}{{ tel.label }}{% if tel.number %}</a>{% endif %}</li>
+    <li>
+      {% if tel.number %}
+        <a href="tel:{{ tel.number }}"  onclick="ga('send', 'event', 'Contato', 'Após orçamento enviado', '{{ tel.label }}');">
+      {% endif %}
+        {{ tel.label }}
+      {% if tel.number %}
+        </a>
+      {% endif %}
+    </li>
   {% endfor %}
 </ul>
