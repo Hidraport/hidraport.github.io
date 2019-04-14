@@ -1,0 +1,43 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve",
+      "type": "shell",
+      "command": "bundle exec jekyll s w",
+      "problemMatcher": [
+        "$jekyll-error-watch",
+        "$jekyll-warning-watch"
+      ]
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "bundle exec jekyll build",
+      "problemMatcher": [
+        "$jekyll-error",
+        "$jekyll-warning"
+      ]
+    },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "bundle exec jekyll clean",
+      "problemMatcher": [
+        "$jekyll-error",
+        "$jekyll-warning"
+      ]
+    },
+    {
+      "label": "Update",
+      "type": "shell",
+      "command": "bundle update",
+      "problemMatcher": [
+        "$jekyll-error",
+        "$jekyll-warning"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 ---
 title: HIDRA-PORT Comércio de Peças e Equipamentos Hidráulicos © 2013
 timezone: America/Sao_Paulo
+lang: pt_BR
 collections:
   aplicacoes:
     title: Aplicacoes
@@ -74,12 +75,15 @@ whatsapp:
 email: hidraport@hidraport.com.br
 facebook: https://www.facebook.com/Hidra-port-Mangueiras-e-Conex%C3%B5es-239814696459784/
 exclude:
-- gulpfile.js
-- README.md
-- desktop.ini
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - desktop.ini
 markdown: kramdown
 sass:
   style: compressed
-plugins:
-- jekyll-coffeescript
 permalink: ":pretty/"
