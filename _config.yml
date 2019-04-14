@@ -1,7 +1,6 @@
 ---
 title: HIDRA-PORT Comércio de Peças e Equipamentos Hidráulicos © 2013
 timezone: America/Sao_Paulo
-lang: pt_BR
 collections:
   aplicacoes:
     title: Aplicacoes
@@ -48,6 +47,7 @@ defaults:
     layout: produto
     categoria: 
     image: 
+lang: pt_BR
 description: 'LOJA DE FÁBRICA, especializada no fornecimento de mangueiras  e conexões
   desde 2007. Fabricamos e distribuímos materiais para  manutenção e montagem industrial
   em toda a região da Baixada Santista.  Atendemos empresas dos setores metalúrgico,
@@ -75,14 +75,14 @@ whatsapp:
 email: hidraport@hidraport.com.br
 facebook: https://www.facebook.com/Hidra-port-Mangueiras-e-Conex%C3%B5es-239814696459784/
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - desktop.ini
+- Gemfile
+- Gemfile.lock
+- node_modules
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/
+- desktop.ini
 markdown: kramdown
 sass:
   style: compressed
