@@ -13,6 +13,15 @@
       ]
     },
     {
+      "label": "Serve incremental",
+      "type": "shell",
+      "command": "bundle exec jekyll s w --livereload --incremental",
+      "problemMatcher": [
+        "$jekyll-error-watch",
+        "$jekyll-warning-watch"
+      ]
+    },
+    {
       "label": "Build",
       "type": "shell",
       "command": "bundle exec jekyll build",
