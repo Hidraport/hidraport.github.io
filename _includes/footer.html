@@ -20,8 +20,13 @@
             {% endfor %}
 
             {% assign zap = site.whatsapp %}
-            <a href="https://wa.me/{{ zap.number }}" target="_blank" class="footer-tel" onclick="ga('send', 'event', 'Contato', 'Telefone no rodapé', '{{ zap.label }}');">
-              {{ zap.label }}
+            <a
+              href="https://wa.me/{{ zap.number }}"
+              class="footer-tel"
+              onclick="ga('send', 'event', 'Contato', 'Telefone no rodapé', '{{ zap.label }}');"
+              target="_blank"
+            >
+              Whatsapp: {{ zap.label }}
             </a>
           </li>
           <li data-grid="center start wrap spacing">
@@ -52,19 +57,21 @@
             <li>
               <a
                 href="{{ site.baseurl }}/aplicacoes/"
-                class="page-link
-                {% if crumbs[1] == 'aplicacoes' %}
-                  selected
-                {% endif %}"
+                class="{%
+                  if crumbs[1] == 'aplicacoes'
+                %}selected{%
+                  endif
+                %}"
               >Aplicações</a>
             </li>
             <li>
               <a
                 href="{{ site.baseurl }}/produtos/"
-                class="page-link
-                {% if crumbs[1] == 'produtos' or crumbs[1] == 'categorias' %}
-                  selected
-                {% endif %}"
+                class="{%
+                  if crumbs[1] == 'produtos' or crumbs[1] == 'categorias'
+                %}selected{%
+                  endif
+                %}"
               >Produtos</a>
             </li>
 
