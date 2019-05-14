@@ -87,5 +87,3 @@ markdown: kramdown
 sass:
   style: compressed
 permalink: ":pretty/"
-plugins:
-- jekyll-sitemap
