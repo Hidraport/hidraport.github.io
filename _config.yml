@@ -1,6 +1,6 @@
 ---
 title: HIDRA-PORT Comércio de Peças e Equipamentos Hidráulicos © 2013
-timezone: America/Sao_Paulo
+timezone: UTC
 collections:
   aplicacoes:
     title: Aplicacoes
@@ -70,8 +70,8 @@ telefones:
   number: "+551332358665"
 - label: 'ID: 7*43245'
 whatsapp:
-  label: "(13) 9 9693-8470"
-  number: 5513996938470
+  label: 'Whatsapp: (13) 9 9693-8470'
+  number: '5513996938470'
 email: hidraport@hidraport.com.br
 facebook: https://www.facebook.com/Hidra-port-Mangueiras-e-Conex%C3%B5es-239814696459784/
 exclude:
