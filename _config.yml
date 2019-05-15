@@ -73,7 +73,7 @@ whatsapp:
   label: "(13) 9 9693-8470"
   number: '5513996938470'
 email: hidraport@hidraport.com.br
-facebook: https://www.facebook.com/Hidra-port-Mangueiras-e-Conex%C3%B5es-239814696459784/
+facebook: https://www.facebook.com/HidraPort/
 exclude:
 - Gemfile
 - Gemfile.lock
