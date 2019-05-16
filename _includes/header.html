@@ -1,18 +1,45 @@
 <header class="site-header">
 
-  <div class="wrapper large" data-grid="row center justify">
+  <div class="wrapper large" data-grid="row center">
 
     <div data-cell="">
       <a class="site-title" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/icon.png" height="40" alt="HIDRA-PORT"></a>
     </div>
 
-    <div data-cell="">
-      <a href="#" class="page-link whatsapp-button" data-grid="row nowrap center small-spacing">
-        <span class="icon" data-cell="shrink">{% include svg/whatsapp.svg %}</span>
-        <span>
-          Whatsapp<br>
-          <small>{{ site.whatsapp.label }}</small>
-        </span>
+    <div class="site-header-contact" data-cell="shrink">
+      <a
+        class="icon-contact icon-whatsapp"
+        href="https://wa.me/{{ site.whatsapp.number }}"
+        onclick="ga('send', 'event', 'Contato', 'Telefone no topo', 'Whatsapp');"
+        target="_blank"
+        title="Chamar pelo whatsapp"
+      >
+        {%- include svg/whatsapp.svg -%}
+      </a>
+      <a
+        class="icon-contact icon-phone"
+        href="tel:{{ site.telefones[0].number }}"
+        onclick="ga('send', 'event', 'Contato', 'Telefone no topo', '{{ site.telefones[0].label }}');"
+        title="Chamada telefônica"
+      >
+        {%- include svg/phone.svg -%}
+      </a>
+      <a
+        class="icon-contact icon-mail"
+        href="#orcamento"
+        onclick="ga('send', 'event', 'Contato', 'Abrir formulário', 'Barra de navegação superior');"
+        title="Solicitar um orçamento"
+      >
+        {%- include svg/mail.svg -%}
+      </a>
+      <a
+        class="icon-contact icon-facebook"
+        href="{{ site.facebook }}"
+        onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Barra de navegação superior');"
+        target="_blank"
+        title="Seguir no Facebook"
+      >
+        {%- include svg/facebook.svg -%}
       </a>
     </div>
 
@@ -56,9 +83,6 @@
             selected
           {% endif %}"
         >Produtos</a>
-
-        <a href="#orcamento" class="page-link" onclick="ga('send', 'event', 'Contato', 'Abrir formulário', 'Barra de navegação superior');">Orçamento</a>
-        <a href="{{ site.facebook }}" target="_blank" class="page-link" onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Barra de navegação superior');">Facebook</a>
       </div>
     </nav>
 
