@@ -82,9 +82,11 @@ $menu-icon-size: 30px
 @keyframes come-in
     0%
         opacity: 0
+        -webkit-transform: translate(100%)
         transform: translate(100%)
     100%
         opacity: 1
+        -webkit-transform: translate(0)
         transform: translate(0)
 
 .site-footer
@@ -160,10 +162,11 @@ $menu-icon-size: 30px
 
 .section-hero
     padding: $spacing-unit 0
-    height: calc(100vh - #{$header-height})
+    min-height: 80vmin
     background:
         color: $grey-color-dark
         repeat: no-repeat
+        position: center
         size: cover
     +media-greater($on-palm)
         background-image: url('/img/mangueiras.jpg')
@@ -174,6 +177,10 @@ $menu-icon-size: 30px
         font: 400 #{$base-font-size * 2}/1.6 $title-font-family
         max-width: 16em
         padding: 0 5px
+        +media-query($on-laptop)
+            height: 8em
+        +media-query($on-palm)
+            height: 6em
         span
             background-color: $laranja
             box-shadow: 0 0 0 5px $laranja
@@ -226,15 +233,18 @@ $menu-icon-size: 30px
             display: none
 
         .checked
+            -webkit-transform: translate(100%)
             transform: translate(100%)
             opacity: 0
             animation: enter-tag .3s .3s ease-in-out forwards
 
         @keyframes enter-tag
             0%
+                -webkit-transform: translate(100%)
                 transform: translate(100%)
                 opacity: 0
             100%
+                -webkit-transform: translate(0)
                 transform: translate(0)
                 opacity: 1
 
@@ -279,28 +289,38 @@ $menu-icon-size: 30px
     right: 0
     opacity: 0
     height: 100%
+    -webkit-transition: .2s ease-in-out
     transition: .2s ease-in-out
     .slide-figure, .slide-title, .slide-excerpt
+        -webkit-transition: .5s ease-in-out
         transition: .5s ease-in-out
     .slide-figure
+        -webkit-transition-delay: .3s
         transition-delay: .3s
     .slide-title
+        -webkit-transition-delay: .6s
         transition-delay: .6s
     .slide-excerpt
+        -webkit-transition-delay: .9s
         transition-delay: .9s
     &.current
         z-index: 999
         opacity: 1
+        -webkit-transform: translate(0)
         transform: translate(0)
     &.prev, &.next
         opacity: 0
+        -webkit-transform: scale(1.5)
         transform: scale(1.5)
         .slide-figure
             opacity: 0
+            -webkit-transform: translate(-50%)
             transform: translate(-50%)
         .slide-title
             opacity: 0
+            -webkit-transform: translate(50%)
             transform: translate(50%)
         .slide-excerpt
             opacity: 0
+            -webkit-transform: translate(50%)
             transform: translate(50%)

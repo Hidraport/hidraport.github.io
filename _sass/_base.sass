@@ -68,6 +68,7 @@ h1, h2, h3, h4, h5, h6
 a
     color: $brand-color
     text-decoration: none
+    -webkit-transition: .3s ease-in-out
     transition: .3s ease-in-out
     &:hover
         text-decoration: underline
@@ -150,6 +151,7 @@ pre
     margin: auto
     padding: 0
     background-color: rgba($grey-color-dark, .3)
+    -webkit-transition: opacity .3s ease-in-out
     transition: opacity .3s ease-in-out
     &:not(:target)
         left: 200%
@@ -214,8 +216,10 @@ pre
     &-whatsapp
         background-color: $light-green
         +media-greater($on-palm)
-            transform: scale(1.5) translate(-5px)
             box-shadow: 0 1px 2px rgba(#000, .4)
+            -webkit-transform: scale(1.5) translate(-5px)
+            transform: scale(1.5) translate(-5px)
+            -webkit-transform-origin: top right
             transform-origin: top right
 
     // &-phone
