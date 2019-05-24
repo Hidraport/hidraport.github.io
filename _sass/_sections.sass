@@ -1,0 +1,122 @@
+.section
+  
+  &-hero
+    padding: $spacing-unit 0
+    min-height: 70vmin
+    background:
+        repeat: no-repeat, no-repeat
+        position: center, center
+        size: cover, cover
+    +media-greater($on-palm)
+        background-image: -webkit-linear-gradient(left, rgba(249,243,219,1) 0%,rgba(255,255,255,0) 100%), url('/img/mangueiras.jpg')
+        background-image: linear-gradient(to right, rgba(249,243,219,1) 0%,rgba(255,255,255,0) 100%), url('/img/mangueiras.jpg')
+    +media-query($on-palm)
+        background-image: -webkit-linear-gradient(left, rgba(249,243,219,1) 0%,rgba(255,255,255,0) 100%), url('/img/mangueiras-mobile.jpg')
+        background-image: linear-gradient(to right, rgba(249,243,219,1) 0%,rgba(255,255,255,0) 100%), url('/img/mangueiras-mobile.jpg')
+        text-align: center
+
+    .hero-logo
+
+        &-caption
+            font:
+                size: 14px
+                weight: bold
+            text-transform: uppercase
+            color: $azul-2
+            text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff
+
+    .hero-tagline
+        font: 400 #{$base-font-size * 1.8}/1.6 $title-font-family
+        max-width: 16em
+        padding: 0 5px
+        +media-query($on-laptop)
+            font-size: $base-font-size * 1.4
+            height: 4.2em
+        +media-query(400px)
+            height: 6em
+        span
+            background-color: $laranja
+            box-shadow: 0 0 0 5px $laranja
+        .hero-tags
+            line-height: .8
+            box-shadow: none
+            text-transform: lowercase
+            position: relative
+        .hero-tag
+            display: none
+            background-color: transparent
+            color: #fff
+            font-weight: 500
+            letter-spacing: 1px
+            box-shadow: none
+            &.on
+                display: unset
+
+  &-search
+    .lista-categorias
+        padding: $spacing-unit
+        +media-query($on-laptop)
+            padding: $spacing-unit / 2
+
+  &-orcamento
+    .orc-produtos-title
+        margin-bottom: 0
+    .orc-produtos-list
+        @extend %form-basis
+        margin-top: 0
+        height: 125px
+        overflow: hidden
+        overflow-y: auto
+        li
+            margin-bottom: 2px
+            padding: 0 5px
+            background-color: $grey-color-light
+            border-radius: 4px
+
+        .first-tag-item
+            padding: 0
+            select
+                border: none
+                border-radius: 4px
+                background-color: $grey-color-dark
+                padding: 4px 2px
+                color: #fff
+
+        .unchecked
+            display: none
+
+        .checked
+            -webkit-transform: translate(100%)
+            transform: translate(100%)
+            opacity: 0
+            animation: enter-tag .3s .3s ease-in-out forwards
+
+        @keyframes enter-tag
+            0%
+                -webkit-transform: translate(100%)
+                transform: translate(100%)
+                opacity: 0
+            100%
+                -webkit-transform: translate(0)
+                transform: translate(0)
+                opacity: 1
+
+        .orc-categoria-title
+            font-weight: bold
+            background-color: transparent
+    .orc-produtos-checkbox
+        float: right
+    &.js
+        input.orc-produtos-checkbox
+            position: fixed
+            top: 0
+            left: 200%
+            opacity: 0
+        label.orc-produtos-checkbox
+            cursor: pointer
+            &:hover
+                color: $brand-color
+            &:after
+                content: '\2a09'
+                line-height: 2
+                padding: 0 5px

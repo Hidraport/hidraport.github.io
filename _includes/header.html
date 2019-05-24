@@ -1,49 +1,12 @@
 <header class="site-header">
 
-  <div class="wrapper large" data-grid="row center">
+  <div class="wrapper large" data-grid="row center justify">
 
-    <div data-cell="">
-      <a class="site-title" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/icon.png" height="40" alt="HIDRA-PORT"></a>
+    <div data-cell="shrink">
+      <a class="site-title" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/icon.png" width="23.16" height="40" alt="HIDRA-PORT"></a>
     </div>
 
-    <div class="site-header-contact" data-cell="shrink">
-      <a
-        class="icon-contact icon-whatsapp"
-        href="https://wa.me/{{ site.whatsapp.number }}"
-        onclick="ga('send', 'event', 'Contato', 'Telefone no topo', 'Whatsapp');"
-        target="_blank"
-        title="Chamar pelo whatsapp"
-      >
-        {%- include svg/whatsapp.svg -%}
-      </a>
-      <a
-        class="icon-contact icon-phone"
-        href="tel:{{ site.telefones[0].number }}"
-        onclick="ga('send', 'event', 'Contato', 'Telefone no topo', '{{ site.telefones[0].label }}');"
-        title="Chamada telefônica"
-      >
-        {%- include svg/phone.svg -%}
-      </a>
-      <a
-        class="icon-contact icon-mail"
-        href="#orcamento"
-        onclick="ga('send', 'event', 'Contato', 'Abrir formulário', 'Barra de navegação superior');"
-        title="Solicitar um orçamento"
-      >
-        {%- include svg/mail.svg -%}
-      </a>
-      <a
-        class="icon-contact icon-facebook"
-        href="{{ site.facebook }}"
-        onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Barra de navegação superior');"
-        target="_blank"
-        title="Seguir no Facebook"
-      >
-        {%- include svg/facebook.svg -%}
-      </a>
-    </div>
-
-    <nav class="site-nav" data-cell="shrink">
+    <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15" width="18" height="15">
           <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
@@ -84,6 +47,43 @@
           {% endif %}"
         >Produtos</a>
       </div>
+    </nav>
+
+    <nav class="site-header-contact" data-cell="shrink">
+      <a
+        class="icon-contact icon-whatsapp"
+        href="https://wa.me/{{ site.whatsapp.number }}"
+        onclick="ga('send', 'event', 'Contato', 'Telefone no topo', 'Whatsapp');"
+        target="_blank"
+        title="Chamar pelo whatsapp"
+      >
+        {%- include svg/whatsapp.svg -%}
+      </a>
+      <a
+        class="icon-contact icon-phone"
+        href="tel:{{ site.telefones[0].number }}"
+        onclick="ga('send', 'event', 'Contato', 'Telefone no topo', '{{ site.telefones[0].label }}');"
+        title="Chamada telefônica"
+      >
+        {%- include svg/phone.svg -%}
+      </a>
+      <a
+        class="icon-contact icon-mail"
+        href="#orcamento"
+        onclick="ga('send', 'event', 'Contato', 'Abrir formulário', 'Barra de navegação superior');"
+        title="Solicitar um orçamento"
+      >
+        {%- include svg/mail.svg -%}
+      </a>
+      <a
+        class="icon-contact icon-facebook"
+        href="{{ site.facebook }}"
+        onclick="ga('send', 'event', 'Navegação', 'Facebook', 'Barra de navegação superior');"
+        target="_blank"
+        title="Seguir no Facebook"
+      >
+        {%- include svg/facebook.svg -%}
+      </a>
     </nav>
 
   </div>

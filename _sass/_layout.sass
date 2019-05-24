@@ -10,7 +10,9 @@ $header-height: 46px
     box-shadow: 0 0 5px rgba(black, .3)
 
     &-contact
-        margin: 0 $spacing-unit / 2
+        margin-right: $spacing-unit / 2
+        +media-query($on-laptop)
+            margin-right: $spacing-unit
 
     + *
         margin-top: $header-height
@@ -18,9 +20,10 @@ $header-height: 46px
 .site-title
     display: inline-block
     padding: 3px 0
+    margin-right: $spacing-unit / 2
 
 .page-link
-    padding: $spacing-unit / 4 $spacing-unit / 2
+    padding: $spacing-unit / 4
     font:
         weight: 400
         size: 12px
@@ -36,16 +39,12 @@ $menu-icon-size: 30px
 
 .site-nav
     line-height: $header-height
-    height: $menu-icon-size
-    text-align: right
     position: relative
 
     .menu-icon
-        display: block
+        display: none
         line-height: 0
         padding-bottom: 5px
-        +media-greater($on-palm)
-            padding-left: $spacing-unit
 
         > svg
             width: $menu-icon-size - 6
@@ -55,29 +54,40 @@ $menu-icon-size: 30px
             path
                 fill: currentcolor
 
-    .trigger
-        display: none
+    +media-query($on-laptop)
+
         position: absolute
-        right: -$spacing-unit / 4
-        overflow: hidden
-        padding: $spacing-unit / 4
-        background-color: $background-color
-        box-shadow: -26px -14px 10px -28px rgba(black, .3), -26px 30px 10px -28px rgba(black, .3), 26px -14px 10px -28px rgba(black, .3), 26px 30px 10px -28px rgba(black, .3)
+        top: 8px
+        right: $spacing-unit / 2
+        text-align: right
 
-        .page-link
+        .menu-icon
             display: block
-            animation: come-in 1.5s ease-in-out forwards
 
-            &:active
-                background-color: $grey-color-light
-
-            @for $i from 1 through 9
-                &:nth-of-type(#{$i})
-                    animation-duration: .15s * $i
-
-    &:hover
         .trigger
-            display: block
+            display: none
+            position: absolute
+            right: -$spacing-unit / 4
+            overflow: hidden
+            padding: $spacing-unit / 4
+            background-color: $background-color
+            box-shadow: -26px -14px 10px -28px rgba(black, .3), -26px 30px 10px -28px rgba(black, .3), 26px -14px 10px -28px rgba(black, .3), 26px 30px 10px -28px rgba(black, .3)
+
+            .page-link
+                display: block
+                animation: come-in 1.5s ease-in-out forwards
+                padding: $spacing-unit / 2
+
+                &:active
+                    background-color: $grey-color-light
+
+                @for $i from 1 through 9
+                    &:nth-of-type(#{$i})
+                        animation-duration: .15s * $i
+
+        &:hover
+            .trigger
+                display: block
 
 @keyframes come-in
     0%
@@ -159,168 +169,3 @@ $menu-icon-size: 30px
             &.selected
                 background-color: $azul-1
                 color: #fff
-
-.section-hero
-    padding: $spacing-unit 0
-    min-height: 80vmin
-    background:
-        color: $grey-color-dark
-        repeat: no-repeat
-        position: center
-        size: cover
-    +media-greater($on-palm)
-        background-image: url('/img/mangueiras.jpg')
-    +media-query($on-palm)
-        background-image: url('/img/mangueiras-mobile.jpg')
-        text-align: center
-    .hero-tagline
-        font: 400 #{$base-font-size * 2}/1.6 $title-font-family
-        max-width: 16em
-        padding: 0 5px
-        +media-query($on-laptop)
-            height: 8em
-        +media-query($on-palm)
-            height: 6em
-        span
-            background-color: $laranja
-            box-shadow: 0 0 0 5px $laranja
-        .hero-tags
-            line-height: .8
-            box-shadow: none
-            text-transform: lowercase
-            position: relative
-        .hero-tag
-            display: none
-            background-color: transparent
-            color: #fff
-            font-weight: 500
-            letter-spacing: 1px
-            box-shadow: none
-            &.on
-                display: unset
-
-.section-search
-    .lista-categorias
-        padding: $spacing-unit
-        +media-query($on-laptop)
-            padding: $spacing-unit / 2
-
-.section-orcamento
-    .orc-produtos-title
-        margin-bottom: 0
-    .orc-produtos-list
-        @extend %form-basis
-        margin-top: 0
-        height: 125px
-        overflow: hidden
-        overflow-y: auto
-        li
-            margin-bottom: 2px
-            padding: 0 5px
-            background-color: $grey-color-light
-            border-radius: 4px
-
-        .first-tag-item
-            padding: 0
-            select
-                border: none
-                border-radius: 4px
-                background-color: $grey-color-dark
-                padding: 4px 2px
-                color: #fff
-
-        .unchecked
-            display: none
-
-        .checked
-            -webkit-transform: translate(100%)
-            transform: translate(100%)
-            opacity: 0
-            animation: enter-tag .3s .3s ease-in-out forwards
-
-        @keyframes enter-tag
-            0%
-                -webkit-transform: translate(100%)
-                transform: translate(100%)
-                opacity: 0
-            100%
-                -webkit-transform: translate(0)
-                transform: translate(0)
-                opacity: 1
-
-        .orc-categoria-title
-            font-weight: bold
-            background-color: transparent
-    .orc-produtos-checkbox
-        float: right
-    &.js
-        input.orc-produtos-checkbox
-            position: fixed
-            top: 0
-            left: 200%
-            opacity: 0
-        label.orc-produtos-checkbox
-            cursor: pointer
-            &:hover
-                color: $brand-color
-            &:after
-                content: '\2a09'
-                line-height: 2
-                padding: 0 5px
-
-.slideshow
-    height: 220px
-    position: relative
-    +media-query($on-palm)
-        height: 600px
-        .slide-figure
-            display: flex
-            align-items: flex-end
-            width: 100%
-            img
-                width: 100%
-
-.slideshow-footer
-    position: relative
-
-.slide
-    position: absolute
-    left: 0
-    right: 0
-    opacity: 0
-    height: 100%
-    -webkit-transition: .2s ease-in-out
-    transition: .2s ease-in-out
-    .slide-figure, .slide-title, .slide-excerpt
-        -webkit-transition: .5s ease-in-out
-        transition: .5s ease-in-out
-    .slide-figure
-        -webkit-transition-delay: .3s
-        transition-delay: .3s
-    .slide-title
-        -webkit-transition-delay: .6s
-        transition-delay: .6s
-    .slide-excerpt
-        -webkit-transition-delay: .9s
-        transition-delay: .9s
-    &.current
-        z-index: 999
-        opacity: 1
-        -webkit-transform: translate(0)
-        transform: translate(0)
-    &.prev, &.next
-        opacity: 0
-        -webkit-transform: scale(1.5)
-        transform: scale(1.5)
-        .slide-figure
-            opacity: 0
-            -webkit-transform: translate(-50%)
-            transform: translate(-50%)
-        .slide-title
-            opacity: 0
-            -webkit-transform: translate(50%)
-            transform: translate(50%)
-        .slide-excerpt
-            opacity: 0
-            -webkit-transform: translate(50%)
-            transform: translate(50%)
