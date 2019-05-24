@@ -73,15 +73,14 @@ layout: default
     {% endfor %}
   </div>
   <div class="wrapper" data-grid="end">
-    <p data-cell="shrink"><a href="{{ site.baseurl }}/produtos/">Veja todos os produtos »</a></p>
-  </div>
-</section>
-
-<section class="page-content section-local">
-  <div class="wrapper">
-    <h2>Localização</h2>
-    {% include mapa.html %}
+    <p data-cell="shrink">
+      <a href="{{ site.baseurl }}/produtos/" data-btn="laranja">Veja todos os produtos</a>
+    </p>
   </div>
 </section>
 
 <div class="page-content">{% include fornecedores-logos.html %}</div>
+
+<section class="page-content section-local">
+  {% include mapa.html %}
+</section>
