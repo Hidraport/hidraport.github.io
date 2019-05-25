@@ -1,48 +1,66 @@
 .section
   
   &-hero
-    padding: $spacing-unit 0
-    min-height: 70vmin
     background:
         repeat: no-repeat, no-repeat
         position: center, center
         size: cover, cover
+    overflow: hidden
+
     +media-greater($on-palm)
-        background-image: -webkit-linear-gradient(left, rgba(249,243,219,1) 0%,rgba(255,255,255,0) 100%), url('/img/mangueiras.jpg')
-        background-image: linear-gradient(to right, rgba(249,243,219,1) 0%,rgba(255,255,255,0) 100%), url('/img/mangueiras.jpg')
+        background-image: url('/img/mangueiras.jpg')
     +media-query($on-palm)
-        background-image: -webkit-linear-gradient(left, rgba(249,243,219,1) 0%,rgba(255,255,255,0) 100%), url('/img/mangueiras-mobile.jpg')
-        background-image: linear-gradient(to right, rgba(249,243,219,1) 0%,rgba(255,255,255,0) 100%), url('/img/mangueiras-mobile.jpg')
+        background-image: url('/img/mangueiras-mobile.jpg')
         text-align: center
+    
+    .wrapper
+        min-height: 70vmin
+        +media-query($on-palm)
+            margin-left: -$spacing-unit / 2
+            margin-right: -$spacing-unit / 2
+            padding-left: $spacing-unit / 2
+            padding-right: $spacing-unit / 2
+    
+    .hero
 
-    .hero-logo
+        &-logo
+            padding: 15px
+            background-color: rgba(white, .7)
+            box-shadow: 0 0 0 15px rgba(white, .3)
 
-        &-caption
-            font:
-                size: 14px
-                weight: bold
-            text-transform: uppercase
-            color: $azul-2
-            text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff
+            &-caption
+                margin-bottom: 0
+                font:
+                    size: 14px
+                    weight: bold
+                text-transform: uppercase
+                color: $azul-2
 
-    .hero-tagline
-        font: 400 #{$base-font-size * 1.8}/1.6 $title-font-family
-        max-width: 16em
-        padding: 0 5px
-        +media-query($on-laptop)
-            font-size: $base-font-size * 1.4
-            height: 4.2em
-        +media-query(400px)
-            height: 6em
-        span
-            background-color: $laranja
-            box-shadow: 0 0 0 5px $laranja
-        .hero-tags
+        &-content
+            max-width: 30em
+            +media-query($on-palm)
+                padding-left: $spacing-unit / 2
+                padding-right: $spacing-unit / 2
+
+        &-tagline
+            font: 400 #{$base-font-size * 1.8}/1.6 $title-font-family
+            max-width: 16em
+            padding: 0 5px
+            +media-query($on-laptop)
+                font-size: $base-font-size * 1.4
+                height: 4.2em
+                max-width: initial
+            +media-query(400px)
+                height: 6em
+            span
+                background-color: $laranja
+                box-shadow: 0 0 0 5px $laranja
+        &-tags
             line-height: .8
             box-shadow: none
             text-transform: lowercase
             position: relative
-        .hero-tag
+        &-tag
             display: none
             background-color: transparent
             color: #fff

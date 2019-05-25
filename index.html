@@ -2,42 +2,51 @@
 layout: default
 ---
 
-<section class="section-hero" data-grid="center">
-  <div class="wrapper large">
-    <div data-grid="center spacing">
-      <div class="hero-logo" data-cell="1of2 fill">
-        <img
-          src="{{ site.baseurl }}/img/hidra-port-logo.png"
-          alt="Logo Hidra-port"
-        >
-        <p class="hero-logo-caption">Mangueiras e conexões hidráulicas</p>
-      </div>
-      <div data-cell="1of2 fill">
-        <p class="hero-tagline">
-          <span>Agilidade e pronta entrega de mangueiras e conexões para
-            <span class="hero-tags">
-              {% for app in site.aplicacoes %}
-                <strong class="hero-tag">{{ app.title }}</strong>
-              {% endfor %}
-            </span>
+<section class="section-hero">
+  <div class="wrapper large" data-grid="center justify spacing">
+    <div
+      class="hero-logo"
+      data-cell="shrink stretch fill"
+      data-grid="column center"
+    >
+      <img
+        src="{{ site.baseurl }}/img/hidra-port-logo.png"
+        alt="Logo Hidra-port"
+        data-cell="shrink"
+      >
+      <p
+        class="hero-logo-caption"
+        data-cell="shrink"
+      >
+        Mangueiras e conexões hidráulicas
+      </p>
+    </div>
+
+    <div class="hero-content" data-cell="1of2 fill">
+      <p class="hero-tagline">
+        <span>Agilidade e pronta entrega de mangueiras e conexões para
+          <span class="hero-tags">
+            {% for app in site.aplicacoes %}
+              <strong class="hero-tag">{{ app.title }}</strong>
+            {% endfor %}
           </span>
-        </p>
-        <p class="hero-cta">
-          <a
-            href="{{ site.baseurl }}/produtos/"
-            data-btn=""
-          >
-            Explore os produtos
-          </a>
-          <a
-            href="{{ site.baseurl }}/download/catalogo-hidraport-2019.pdf"
-            data-btn="azul"
-            target="_blank"
-          >
-            Baixe o nosso catálogo
-          </a>
-        </p>
-      </div>
+        </span>
+      </p>
+      <p class="hero-cta">
+        <a
+          href="{{ site.baseurl }}/produtos/"
+          data-btn=""
+        >
+          Explore os produtos
+        </a>
+        <a
+          href="{{ site.baseurl }}/download/catalogo-hidraport-2019.pdf"
+          data-btn="azul"
+          target="_blank"
+        >
+          Baixe o nosso catálogo
+        </a>
+      </p>
     </div>
   </div>
 </section>
