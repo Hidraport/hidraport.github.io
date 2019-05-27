@@ -1,140 +1,189 @@
 .section
-  
-  &-hero
-    background:
-        repeat: no-repeat, no-repeat
-        position: center, center
-        size: cover, cover
-    overflow: hidden
 
-    +media-greater($on-palm)
-        background-image: url('/img/mangueiras.jpg')
-    +media-query($on-palm)
-        background-image: url('/img/mangueiras-mobile.jpg')
-        text-align: center
-    
-    .wrapper
-        min-height: 70vmin
+    &-hero
+        background:
+            repeat: no-repeat, no-repeat
+            position: center, center
+            size: cover, cover
+        overflow: hidden
+
+        +media-greater($on-palm)
+            background-image: url('/img/mangueiras.jpg')
         +media-query($on-palm)
-            margin-left: -$spacing-unit / 2
-            margin-right: -$spacing-unit / 2
-            padding-left: $spacing-unit / 2
-            padding-right: $spacing-unit / 2
-    
-    .hero
-
-        &-logo
-            padding: 15px
-            background-color: rgba(white, .7)
-            box-shadow: 0 0 0 15px rgba(white, .3)
-
-            &-caption
-                margin-bottom: 0
-                font:
-                    size: 14px
-                    weight: bold
-                text-transform: uppercase
-                color: $azul-2
-
-        &-content
-            max-width: 30em
+            background-image: url('/img/mangueiras-mobile.jpg')
+            text-align: center
+        
+        .wrapper
+            min-height: 70vmin
             +media-query($on-palm)
+                margin-left: -$spacing-unit / 2
+                margin-right: -$spacing-unit / 2
                 padding-left: $spacing-unit / 2
                 padding-right: $spacing-unit / 2
+        
+        .hero
 
-        &-tagline
-            font: 400 #{$base-font-size * 1.8}/1.6 $title-font-family
-            max-width: 16em
-            padding: 0 5px
-            +media-query($on-laptop)
-                font-size: $base-font-size * 1.4
-                height: 4.2em
-                max-width: initial
-            +media-query(400px)
-                height: 6em
-            span
-                background-color: $laranja
-                box-shadow: 0 0 0 5px $laranja
-        &-tags
-            line-height: .8
-            box-shadow: none
-            text-transform: lowercase
-            position: relative
-        &-tag
-            display: none
-            background-color: transparent
-            color: #fff
-            font-weight: 500
-            letter-spacing: 1px
-            box-shadow: none
-            &.on
-                display: unset
+            &-logo
+                padding: 15px
+                background-color: rgba(white, .7)
+                box-shadow: 0 0 0 15px rgba(white, .3)
 
-  &-search
-    .lista-categorias
-        padding: $spacing-unit
-        +media-query($on-laptop)
-            padding: $spacing-unit / 2
+                &-caption
+                    margin-bottom: 0
+                    font:
+                        size: 14px
+                        weight: bold
+                    text-transform: uppercase
+                    color: $azul-2
 
-  &-orcamento
-    .orc-produtos-title
-        margin-bottom: 0
-    .orc-produtos-list
-        @extend %form-basis
-        margin-top: 0
-        height: 125px
-        overflow: hidden
-        overflow-y: auto
-        li
-            margin-bottom: 2px
-            padding: 0 5px
-            background-color: $grey-color-light
-            border-radius: 4px
+            &-content
+                max-width: 30em
+                +media-query($on-palm)
+                    padding-left: $spacing-unit / 2
+                    padding-right: $spacing-unit / 2
 
-        .first-tag-item
-            padding: 0
-            select
-                border: none
-                border-radius: 4px
-                background-color: $grey-color-dark
-                padding: 4px 2px
+            &-tagline
+                font: 400 #{$base-font-size * 1.8}/1.6 $title-font-family
+                max-width: 16em
+                padding: 0 5px
+                +media-query($on-laptop)
+                    font-size: $base-font-size * 1.4
+                    height: 4.2em
+                    max-width: initial
+                +media-query(400px)
+                    height: 6em
+                span
+                    background-color: $laranja
+                    box-shadow: 0 0 0 5px $laranja
+            &-tags
+                line-height: .8
+                box-shadow: none
+                text-transform: lowercase
+                position: relative
+            &-tag
+                display: none
+                background-color: transparent
                 color: #fff
+                font-weight: 500
+                letter-spacing: 1px
+                box-shadow: none
+                &.on
+                    display: unset
 
-        .unchecked
-            display: none
+    &-features
+        +media-greater($on-palm)
+            margin-top: -$spacing-unit / 2
+        +media-query($on-palm)
+            margin-top: $spacing-unit / 2
 
-        .checked
-            -webkit-transform: translate(100%)
-            transform: translate(100%)
-            opacity: 0
-            animation: enter-tag .3s .3s ease-in-out forwards
+        .feature
 
-        @keyframes enter-tag
-            0%
+            &-item
+                position: relative
+                background-color: $feature-color
+                border-radius: 4px
+                box-shadow: 0 5px 15px 0 rgba(black, .2)
+                +media-greater($on-palm)
+                    max-width: 14em
+
+            &-pic
+                position: absolute
+                z-index: 1
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                border-radius: 4px
+                background:
+                    repeat: no-repeat
+                    position: center
+                    size: cover
+                opacity: .5
+
+            &-link
+                position: relative
+                z-index: 2
+                display: block
+                padding: $spacing-unit / 4
+                height: 100px
+                font: 400 1.5em/1.2 $title-font-family
+                letter-spacing: 1px
+                text-decoration: none
+                text-shadow: -1px 1px 1px #000
+                color: white
+                border-radius: 4px
+                background-color: rgba($grey-color-dark, .3)
+                &:hover, &:focus, &:active
+                    background-color: rgba($azul-1, .5)
+                    box-shadow: 0 5px 15px rgba(black, .3)
+                +media-query($on-laptop)
+                    font-size: 1.4em
+
+    &-search
+        .lista-categorias
+            padding: $spacing-unit
+            +media-query($on-laptop)
+                padding: $spacing-unit / 2
+
+    &-orcamento
+        .orc-produtos-title
+            margin-bottom: 0
+        .orc-produtos-list
+            @extend %form-basis
+            margin-top: 0
+            height: 125px
+            overflow: hidden
+            overflow-y: auto
+            li
+                margin-bottom: 2px
+                padding: 0 5px
+                background-color: $grey-color-light
+                border-radius: 4px
+
+            .first-tag-item
+                padding: 0
+                select
+                    border: none
+                    border-radius: 4px
+                    background-color: $grey-color-dark
+                    padding: 4px 2px
+                    color: #fff
+
+            .unchecked
+                display: none
+
+            .checked
                 -webkit-transform: translate(100%)
                 transform: translate(100%)
                 opacity: 0
-            100%
-                -webkit-transform: translate(0)
-                transform: translate(0)
-                opacity: 1
+                animation: enter-tag .3s .3s ease-in-out forwards
 
-        .orc-categoria-title
-            font-weight: bold
-            background-color: transparent
-    .orc-produtos-checkbox
-        float: right
-    &.js
-        input.orc-produtos-checkbox
-            position: fixed
-            top: 0
-            left: 200%
-            opacity: 0
-        label.orc-produtos-checkbox
-            cursor: pointer
-            &:hover
-                color: $brand-color
-            &:after
-                content: '\2a09'
-                line-height: 2
-                padding: 0 5px
+            @keyframes enter-tag
+                0%
+                    -webkit-transform: translate(100%)
+                    transform: translate(100%)
+                    opacity: 0
+                100%
+                    -webkit-transform: translate(0)
+                    transform: translate(0)
+                    opacity: 1
+
+            .orc-categoria-title
+                font-weight: bold
+                background-color: transparent
+        .orc-produtos-checkbox
+            float: right
+        &.js
+            input.orc-produtos-checkbox
+                position: fixed
+                top: 0
+                left: 200%
+                opacity: 0
+            label.orc-produtos-checkbox
+                cursor: pointer
+                &:hover
+                    color: $brand-color
+                &:after
+                    content: '\2a09'
+                    line-height: 2
+                    padding: 0 5px

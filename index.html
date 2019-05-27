@@ -1,5 +1,14 @@
 ---
 layout: default
+features:
+-
+  url: /produtos/borrachas-cordas-e-correias/correias/
+-
+  url: /produtos/ferramentas-tramontina/
+-
+  url: /produtos/lubrificacao/oleos/
+-
+  url: /produtos/equipamentos-de-seguranca/
 ---
 
 <section class="section-hero">
@@ -67,21 +76,47 @@ layout: default
   })();
 </script>
 
+<section class="section-features">
+  <div class="wrapper large">
+    <div data-grid="around center small-spacing">
+      {% for feat in page.features %}
+        {% assign feat_page = site.categorias | where: 'url', feat.url | first %}
+        {% if feat_page == null %}
+          {% assign feat_page = site.produtos | where: 'url', feat.url | first %}
+        {% endif %}
+        <div data-cell="1of4 fill" class="feature-item">
+          <div
+            class="feature-pic"
+            style="background-image: url('{{ site.baseurl }}{{ feat_page.image }}')"
+          >
+          </div>
+          <a
+            class="feature-link"
+            href="{{ site.baseurl }}{{ feat_page.url }}"
+          >
+            <span class="feature-label">{{ feat_page.title }}</span>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="page-content section-search">
-  <header class="wrapper">
+  <header class="wrapper large">
     <h2>Encontre um produto</h2>
   </header>
-  <div class="wrapper">
+  <div class="wrapper large">
     {% include search-form.html %}
   </div>
-  <div class="page-content lista-categorias" data-grid="spacing cols-4">
+  <div class="wrapper large lista-categorias" data-grid="spacing cols-4">
     {% for categoria in site.categorias %}
       <article class="lista-categorias-item">
         <a href="{{ site.baseurl }}{{ categoria.url }}">{{ categoria.title }}</a>
       </article>
     {% endfor %}
   </div>
-  <div class="wrapper" data-grid="end">
+  <div class="wrapper large" data-grid="end">
     <p data-cell="shrink">
       <a href="{{ site.baseurl }}/produtos/" data-btn="laranja">Veja todos os produtos</a>
     </p>
