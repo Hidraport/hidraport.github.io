@@ -18,16 +18,6 @@
               {% endif %}
               {% if forloop.last == false %} / {% endif %}
             {% endfor %}
-
-            {% assign zap = site.whatsapp %}
-            <a
-              href="https://wa.me/{{ zap.number }}"
-              class="footer-tel"
-              onclick="ga('send', 'event', 'Contato', 'Telefone no rodapé', '{{ zap.label }}');"
-              target="_blank"
-            >
-              Whatsapp: {{ zap.label }}
-            </a>
           </li>
           <li data-grid="center start wrap spacing">
             <a data-cell="shrink" href="mailto:{{ site.email }}" onclick="ga('send', 'event', 'Contato', 'Clique no e-mail', 'Rodapé');">{{ site.email }}</a>

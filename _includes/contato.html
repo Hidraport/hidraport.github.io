@@ -41,3 +41,29 @@
     </form>
   </div>
 </div>
+
+<nav class="site-contact" data-grid="row end justify">
+  <div data-cell="shrink">
+    <a
+      class="icon-contact icon-whatsapp"
+      href="https://wa.me/{{ site.whatsapp.number }}"
+      onclick="ga('send', 'event', 'Contato', 'Botão fixo', 'Whatsapp');"
+      target="_blank"
+      title="Chamar pelo whatsapp"
+    >
+      {%- include svg/whatsapp.svg -%}
+    </a>
+  </div>
+  <div data-cell="shrink">
+    <button
+      class="icon btn-chat"
+      data-btn="azul"
+      data-grid="row center small-spacing"
+      href="#atendimento"
+      onclick="ga('send', 'event', 'Contato', 'Botão fixo', 'Atendimento');"
+    >
+      {%- include svg/mail.svg -%}
+      <span>Atendimento Online</span>
+    </button>
+  </div>
+</nav>
