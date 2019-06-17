@@ -42,6 +42,35 @@
   </div>
 </div>
 
+<div class="section-contato" data-modal data-grid="column center" id="atendimento">
+  {% comment %} Alinhado como coluna devido a um bug no IE11 --> {% endcomment %}
+  <div class="wrapper" data-cell="shrink">
+    <h2>Atendimento</h2>
+    <form action="//server.{{ site.url | remove_first: 'http://' }}/enviar_email.php" method="post">
+      <div data-grid="spacing">
+        <div data-cell="1of2">
+          <label for="nome">Nome</label><input type="text" name="nome" required placeholder="Digite seu nome completo">
+        </div>
+      </div>
+      <div data-grid="spacing">
+        <div data-cell="1of2">
+          <label for="email">E-mail</label><input type="email" name="email" required placeholder="email@dominio.com">
+        </div>
+        <div data-cell="1of2">
+          <label for="telefone">Telefone</label><input type="tel" name="telefone" required placeholder="(99) 0000-0000">
+        </div>
+      </div>
+      <div data-grid="spacing">
+        <div data-cell="1of2">
+          <label for="mensagem">Mensagem</label><textarea name="mensagem" cols="30" rows="6" placeholder="Informe detalhes do orçamento"></textarea>
+        </div>
+      </div>
+      <p class="honeypot"><label for="honey">Se estiver vendo isto, deixe este campo em branco</label><input type="text" name="honey"></p>
+      <p data-grid="row nowrap spacing justify"><a href="#X" data-cell="shrink">CONTINUAR NAVEGANDO</a><button data-cell="shrink">Enviar</button></p>
+    </form>
+  </div>
+</div>
+
 <nav class="site-contact" data-grid="row end justify">
   <div data-cell="shrink">
     <a
@@ -55,7 +84,7 @@
     </a>
   </div>
   <div data-cell="shrink">
-    <button
+    <a
       class="icon btn-chat"
       data-btn="azul"
       data-grid="row center small-spacing"
@@ -64,6 +93,6 @@
     >
       {%- include svg/mail.svg -%}
       <span>Atendimento Online</span>
-    </button>
+    </a>
   </div>
 </nav>
