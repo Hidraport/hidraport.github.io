@@ -1,18 +1,10 @@
 .section
 
     &-hero
-        background:
-            repeat: no-repeat, no-repeat
-            position: center, center
-            size: cover, cover
         overflow: hidden
+        background: $azul-bebe url('/img/terminais-hidraulicos-50-progressivo.jpg') top no-repeat
+        background-size: cover
 
-        +media-greater($on-palm)
-            background-image: url('/img/mangueiras.jpg')
-        +media-query($on-palm)
-            background-image: url('/img/mangueiras-mobile.jpg')
-            text-align: center
-        
         .wrapper
             min-height: 70vmin
             +media-query($on-palm)
@@ -20,13 +12,18 @@
                 margin-right: -$spacing-unit / 2
                 padding-left: $spacing-unit / 2
                 padding-right: $spacing-unit / 2
-        
+
         .hero
 
             &-logo
                 padding: 15px
                 background-color: rgba(white, .7)
                 box-shadow: 0 0 0 15px rgba(white, .3)
+
+                &-subtitle
+                    font:
+                        size: 14px
+                        weight: bold
 
                 &-caption
                     margin-bottom: 0
@@ -44,7 +41,7 @@
 
             &-tagline
                 font: 400 #{$base-font-size * 1.8}/1.6 $title-font-family
-                max-width: 16em
+                max-width: 10em
                 padding: 0 5px
                 +media-query($on-laptop)
                     font-size: $base-font-size * 1.4
@@ -71,59 +68,55 @@
                     display: unset
 
     &-features
-        +media-greater($on-palm)
-            margin-top: -$spacing-unit / 2
-        +media-query($on-palm)
-            margin-top: $spacing-unit / 2
-
-        .feature
-
-            &-item
-                position: relative
-                background-color: $feature-color
-                border-radius: 4px
-                box-shadow: 0 5px 15px 0 rgba(black, .2)
+        margin-top: -$spacing-unit * 1.5
+        .card
+            padding: 0
+            position: relative
+            height: 100px
+            overflow: hidden
+            background-color: #165265
+            &:not(:last-of-type)
                 +media-greater($on-palm)
-                    max-width: 14em
-
-            &-pic
-                position: absolute
-                z-index: 1
-                top: 0
-                left: 0
-                right: 0
-                bottom: 0
-                border-radius: 4px
-                background:
-                    repeat: no-repeat
-                    position: center
-                    size: cover
-                opacity: .5
-
-            &-link
-                position: relative
-                z-index: 2
+                    margin-right: $spacing-unit / 4
+                +media-greater($on-laptop)
+                    margin-right: $spacing-unit
+        .feature-fig
+            opacity: .5
+            +media-query($on-palm)
+                img
+                    position: absolute
+                    top: 0
+                    left: 0
+                    min-width: 100%
+                    transform: translateY(-50%)
+        .feature-title
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            font:
+                size: $base-font-size * 2
+                weight: 400
+            margin: 0
+            a
                 display: block
-                padding: $spacing-unit / 4
-                height: 100px
-                font: 400 1.5em/1.2 $title-font-family
-                letter-spacing: 1px
-                text-decoration: none
-                text-shadow: -1px 1px 1px #000
-                color: white
-                border-radius: 4px
-                background-color: rgba($grey-color-dark, .3)
-                &:hover, &:focus, &:active
-                    background-color: rgba($azul-1, .5)
-                    box-shadow: 0 5px 15px rgba(black, .3)
-                +media-query($on-laptop)
-                    font-size: 1.4em
-
-    &-search
-        .lista-categorias
-            padding: $spacing-unit
-            +media-query($on-laptop)
                 padding: $spacing-unit / 2
+                width: 100%
+                height: 100%
+                text-decoration: none
+                color: #fff
+                text-shadow: -1px 1px 1px rgba(black, .5)
+                transition: .3s ease-in-out
+                &:hover, &:active, &:focus
+                    background-color: rgba($brand-color, .5)
+
+    &-aplicacoes
+        overflow: hidden
+        background-color: $azul-1
+        color: #fff
+        a
+            color: $azul-2
 
     &-orcamento
         .orc-produtos-title

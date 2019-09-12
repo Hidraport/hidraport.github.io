@@ -1,46 +1,42 @@
 ---
 layout: default
 features:
-- url: "/produtos/borrachas-cordas-e-correias/correias/"
-- url: "/produtos/ferramentas-tramontina/"
-- url: "/produtos/lubrificacao/oleos/"
-- url: "/produtos/equipamentos-de-seguranca/"
+- title: Correias
+  link: "/produtos/borrachas-cordas-e-correias/correias/"
+  img: "/uploads/destaques-correias.jpg"
+- title: Ferramentas
+  link: "/produtos/ferramentas-tramontina/"
+  img: "/uploads/destaques-ferramentas-tramontina.jpg"
+- title: Óleos
+  link: "/produtos/lubrificacao/oleos/"
+  img: "/uploads/destaques-oleos.jpg"
+- title: EPIs
+  link: "/produtos/equipamentos-de-seguranca/"
+  img: "/uploads/destaques-equipamentos-de-seguranca.jpg"
 ---
 
-<section class="section-hero">
-  <div class="wrapper large" data-grid="center justify spacing">
-    <div
-      class="hero-logo"
-      data-cell="shrink stretch fill"
-      data-grid="column center"
-    >
-      <img
-        src="{{ site.baseurl }}/img/hidra-port-logo.png"
-        alt="Logo Hidra-port"
-        data-cell="shrink"
-      >
-      <p
-        class="hero-logo-caption"
-        data-cell="shrink"
-      >
-        Mangueiras e conexões hidráulicas
-      </p>
+<section class="section-hero" data-grid="center">
+  <div class="wrapper large" data-grid="center spacing">
+    <div data-cell="1of2" data-grid="column start">
+      <div data-cell>
+        <img src="{{ site.baseurl }}/img/hidra-port-logo.png" alt="Hidra-Port - loja de fábrica">
+      </div>
+      <p class="hero-logo-subtitle">MANGUEIRAS E CONEXÕES HIDRÁULICAS</p>
     </div>
-
-    <div class="hero-content" data-cell="1of2 fill">
-      <p class="hero-tagline">
-        <span>Agilidade e pronta entrega de mangueiras e conexões para
-          <span class="hero-tags">
-            {% for app in site.aplicacoes %}
-              <strong class="hero-tag">{{ app.title }}</strong>
-            {% endfor %}
-          </span>
-        </span>
+    <div data-cell="1of2 shrink">
+      <p class="hero-tagline">Agilidade e pronta entrega de mangueiras e conexões.</p>
+      <p>
+        <a
+          href="{{ site.baseurl }}/produtos/"
+          data-btn="azul"
+        >
+          Explore os produtos
+        </a>
       </p>
-      <p class="hero-cta">
+      <p>
         <a
           href="{{ site.baseurl }}/download/catalogo-hidraport-2019.pdf"
-          data-btn="azul"
+          data-btn="laranja"
           target="_blank"
         >
           Baixe o nosso catálogo
@@ -50,66 +46,45 @@ features:
   </div>
 </section>
 
-<script>
-  (function() {
-    var tags = Array.prototype.slice
-      .call(document.querySelectorAll('.hero-tag'));
-    var index = 0;
-    setInterval(function () {
-      tags.forEach(function (t, i) {
-        i === index
-          ? t.classList.add('on')
-          : t.classList.remove('on')
-      });
-      (index++ < tags.length -1) || (index = 0);
-    }, 1500);
-  })();
-</script>
-
-<section class="section-features">
-  <div class="wrapper large">
-    <div data-grid="around center small-spacing">
-      {% for feat in page.features %}
-        {% assign feat_page = site.categorias | where: 'url', feat.url | first %}
-        {% if feat_page == null %}
-          {% assign feat_page = site.produtos | where: 'url', feat.url | first %}
-        {% endif %}
-        <div data-cell="1of4 fill" class="feature-item">
-          <div
-            class="feature-pic"
-            style="background-image: url('{{ site.baseurl }}{{ feat_page.image }}')"
-          >
+<section class="page-content section-features">
+  <div data-grid="justify" data-cell="stretch" class="wrapper large">
+    {% for produto in page.features %}
+      <div data-grid="column justify" class="card">
+          <div data-grid="center" class="feature-fig">
+            <img src="{{ site.baseurl }}{{ produto.img }}" alt="{{ produto.title }}" width="200">
           </div>
-          <a
-            class="feature-link"
-            href="{{ site.baseurl }}{{ feat_page.url }}"
-          >
-            <span class="feature-label">{{ feat_page.title }}</span>
-          </a>
+          <h6 data-cell="shrink" class="feature-title"><a href="{{ site.baseurl }}{{ produto.link }}">{{ produto.title }}</a></h6>
         </div>
-      {% endfor %}
-    </div>
+    {% endfor %}
+  </div>
+  <div data-grid="end" class="wrapper large">
+    <p data-cell="shrink"><a href="/produtos/">Conheça todos os produtos »</a></p>
   </div>
 </section>
 
-<section class="page-content section-search">
-  <header class="wrapper large">
-    <h2>Encontre um produto</h2>
+<section class="page-content section-aplicacoes">
+  <header class="wrapper">
+    <h2>Aplicações</h2>
   </header>
-  <div class="wrapper large">
-    {% include search-form.html %}
-  </div>
-  <div class="wrapper large lista-categorias" data-grid="spacing cols-4">
-    {% for categoria in site.categorias %}
-      <article class="lista-categorias-item">
-        <a href="{{ site.baseurl }}{{ categoria.url }}">{{ categoria.title }}</a>
-      </article>
+  <div class="wrapper slideshow">
+    {% for app in site.aplicacoes %}
+    <div class="wrapper slide{% if forloop.first == 'true' %} current{% endif %}" data-grid="center">
+      <div data-grid="spacing">
+        <div class="slide-figure" data-cell="1of3" data-grid="center">
+          <div data-cell="shrink">
+            <img src="{{ app.image }}" alt ="{{ app.title }}">
+          </div>
+        </div>
+        <div data-cell="2of3">
+          <h3 class="slide-title">{{ app.title }}</h3>
+          <p class="slide-excerpt">{{ app.content | strip_html | strip_newlines | truncatewords: 26 }}</p>
+        </div>
+      </div>
+    </div>
     {% endfor %}
   </div>
-  <div class="wrapper large" data-grid="end">
-    <p data-cell="shrink">
-      <a href="{{ site.baseurl }}/produtos/" data-btn="laranja">Veja todos os produtos</a>
-    </p>
+  <div class="wrapper slideshow-footer" data-grid="end">
+    <p data-cell="shrink"><a href="/aplicacoes">Saiba mais sobre as aplicações dos nossos produtos »</a></p>
   </div>
 </section>
 
