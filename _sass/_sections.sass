@@ -10,8 +10,7 @@
             +media-query($on-palm)
                 margin-left: -$spacing-unit / 2
                 margin-right: -$spacing-unit / 2
-                padding-left: $spacing-unit / 2
-                padding-right: $spacing-unit / 2
+                padding: $spacing-unit
 
         .hero
 
@@ -24,6 +23,7 @@
                     font:
                         size: 14px
                         weight: bold
+                    text-shadow: 0 0 15px white
 
                 &-caption
                     margin-bottom: 0
@@ -41,6 +41,7 @@
 
             &-tagline
                 font: 400 #{$base-font-size * 1.8}/1.6 $title-font-family
+                text-shadow: 0 0 15px white
                 max-width: 10em
                 padding: 0 5px
                 +media-query($on-laptop)
