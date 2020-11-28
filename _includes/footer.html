@@ -7,7 +7,7 @@
         <h2 class="footer-heading">{{ site.title }}</h2>
         <ul class="seamless">
           <li>{{ site.endereco }}</li>
-          <li>Tel.: 
+          <li>Tel.:
             {% for tel in site.telefones %}
               {% if tel.number %}
                 <a href="tel:{{ tel.number }}" class="footer-tel" onclick="ga('send', 'event', 'Contato', 'Telefone no rodapé', '{{ tel.label }}');">
@@ -27,7 +27,7 @@
       </div>
       <div data-cell="shrink fill" data-grid="row nowrap spacing">
         <div data-cell="3of4">
-          <img src="{{ site.baseurl }}/img/hidraport-12-anos.png" width="200" alt="Hidra-Port 12 anos!">
+          <img src="{{ site.baseurl }}/img/selo-hidra-port-2020.png" width="200" alt="Hidra-Port. Desde 2007.">
         </div>
         <div data-cell="1of4" data-grid="column justify">
           <ul class="seamless">
