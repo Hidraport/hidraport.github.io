@@ -1,5 +1,5 @@
 ---
-title: HIDRA-PORT Conexões e Mangueiras Hidráulicas
+title: Hidra-Port Conexões e Mangueiras Hidráulicas
 timezone: UTC
 collections:
   aplicacoes:
@@ -55,7 +55,7 @@ description: 'LOJA DE FÁBRICA, especializada no fornecimento de mangueiras  e c
   outros.
 
 '
-baseurl: ''
+baseurl: 
 url: http://hidraport.com.br
 endereco:
 - Av. Rangel Pestana 54, Vila Mathias - Santos-SP
@@ -71,7 +71,7 @@ telefones:
 - label: 'ID: 7*43245'
 whatsapp:
   label: "(13) 9 9693-8470"
-  number: '5513996938470'
+  number: 5513996938470
 email: hidraport@hidraport.com.br
 facebook: https://www.facebook.com/HidraPort/
 exclude:
