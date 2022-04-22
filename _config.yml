@@ -68,9 +68,8 @@ telefones:
   number: "+551332232997"
 - label: 'Fax.: (13) 3235-8665'
   number: "+551332358665"
-- label: 'ID: 7*43245'
 whatsapp:
-  label: "(13) 9 9645.0212"
+  label: "(13) 9 9645-0212"
   number: 5513996450212
 email: hidraport@hidraport.com.br
 facebook: https://www.facebook.com/HidraPort/
