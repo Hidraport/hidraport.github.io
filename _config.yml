@@ -48,13 +48,11 @@ defaults:
     categoria:
     image:
 lang: pt_BR
-description: 'LOJA DE FÁBRICA, especializada no fornecimento de mangueiras  e conexões
+description: 'Loja especializada no fornecimento de mangueiras  e conexões
   desde 2007. Fabricamos e distribuímos materiais para  manutenção e montagem industrial
   em toda a região da Baixada Santista.  Atendemos empresas dos setores metalúrgico,
   químico, siderúrgico,  de autopeças, plásticos, papeleiros, de navegação, entre
-  outros.
-
-'
+  outros.'
 livereload: true
 baseurl:
 url: http://hidraport.com.br
