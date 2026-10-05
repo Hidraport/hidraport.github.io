@@ -102,17 +102,31 @@ $menu-icon-size: 30px
 .site-contact
     position: fixed
     bottom: 0
-    left: $spacing-unit / 2
-    right: $spacing-unit / 2
+    left: $spacing-unit / 4
+    right: $spacing-unit / 4
+    z-index: 999
 
-    .icon-whatsapp
-        margin-bottom: $spacing-unit / 4
+    .icon-contact
+        display: inline-block
+        margin-left: 0
+        margin-bottom: $spacing-unit / 8
+        padding: 6px
+
+        img
+            width: auto
+            height: 2em
+
+    .icon-mercadolivre
+        background-color: #fff159
 
     .btn-chat
         margin-bottom: 0
         padding-top: $spacing-unit / 4
         padding-bottom: $spacing-unit / 4
         border-radius: 10px 10px 0 0
+
+        svg
+            margin-right: $spacing-unit / 4
 
 .site-footer
     font-size: $small-font-size
